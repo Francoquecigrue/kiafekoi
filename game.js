@@ -66,12 +66,16 @@
     }
     if (actx.state !== "running") actx.resume();
   }
+  // Un seul élément audio par candidat ; s'il n'existe pas (404), on bascule sur le bip.
+  const missing = {};
+  let playing = null;
   function loadClips() {
     for (const c of CANDIDATES) {
       const a = new Audio();
       a.preload = "auto";
-      a.addEventListener("canplaythrough", () => { clips[c.id] = a; }, { once: true });
+      a.addEventListener("error", () => { missing[c.id] = true; }, { once: true });
       a.src = `audio/${c.id}.mp3`;
+      clips[c.id] = a;
     }
   }
   function tone(freq, start, dur, type = "square", vol = 0.35) {
@@ -92,16 +96,18 @@
     for (const ch of id) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
     return { base: 220 + (h % 220), pattern: [1, 1.2 + (h % 3) * 0.12, 0.85 + (h % 5) * 0.06] };
   }
-  function playCandidate(id) {
-    if (!soundOn) return;
-    const clip = clips[id];
-    if (clip) {
-      const a = clip.cloneNode();
-      a.play().catch(() => {});
-      return;
-    }
+  function bip(id) {
     const v = voiceOf(id);
     v.pattern.forEach((m, i) => tone(v.base * m, i * 0.09, 0.12));
+  }
+  function playCandidate(id) {
+    if (!soundOn) return;
+    if (playing) { playing.pause(); playing = null; } // pas de chevauchement
+    const a = clips[id];
+    if (!a || missing[id]) return bip(id);
+    a.currentTime = 0;
+    playing = a;
+    a.play().catch(() => { playing = null; bip(id); });
   }
   const sfxWrong = () => { tone(140, 0, 0.25, "sawtooth"); tone(100, 0.15, 0.35, "sawtooth"); };
   const sfxWin = () => [523, 659, 784, 1046].forEach((f, i) => tone(f, i * 0.08, 0.18, "triangle", 0.4));
