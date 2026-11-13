@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0d1b3e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Qui est concerné ? — Présidentielle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <section id="screen-start" class="screen active">
+    <h1>Qui est<br>concerné&nbsp;?</h1>
+    <p class="sub">Présidentielle — Stop ou encore</p>
+    <ul class="rules">
+      <li>Touchez <b>toutes</b> les têtes concernées par l'affirmation.</li>
+      <li>Chaque bonne réponse rapporte plus que la précédente : 100, 200, 300…</li>
+      <li><b>Stop</b> : vous encaissez la cagnotte de la question.</li>
+      <li><b>Erreur</b> : vous n'encaissez que la moitié.</li>
+      <li>Chrono global : <b id="rule-time"></b> secondes.</li>
+    </ul>
+    <button id="btn-start" class="big">Jouer</button>
+    <p class="best">Record : <span id="best-start">0</span></p>
+  </section>
+
+  <section id="screen-game" class="screen">
+    <header class="hud">
+      <div><small>Score</small><b id="score">0</b></div>
+      <div class="timer"><small>Temps</small><b id="time">0</b></div>
+      <div><small>Cagnotte</small><b id="pot">0</b></div>
+    </header>
+    <div class="timebar"><div id="timebar-fill"></div></div>
+    <div class="question">
+      <p id="question"></p>
+      <small id="progress"></small>
+    </div>
+    <div id="grid" class="grid"></div>
+    <div id="feedback" class="feedback"></div>
+    <button id="btn-stop" class="big stop">Stop — encaisser <span id="stop-val">0</span></button>
+  </section>
+
+  <section id="screen-end" class="screen">
+    <h2>Temps écoulé</h2>
+    <p class="final">Score : <b id="final-score">0</b></p>
+    <p id="new-record" class="record hidden">Nouveau record&nbsp;!</p>
+    <p class="best">Record : <span id="best-end">0</span></p>
+    <p class="stats" id="stats"></p>
+    <button id="btn-restart" class="big">Rejouer</button>
+  </section>
+</main>
+<script src="data.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
