@@ -12,12 +12,13 @@
 <main id="app">
   <section id="screen-start" class="screen active">
     <h1>Qui est<br>concerné&nbsp;?</h1>
-    <p class="sub">Présidentielle — Stop ou encore</p>
+    <p class="sub">Présidentielle 2027 — Stop ou encore</p>
     <ul class="rules">
       <li>Touchez <b>toutes</b> les têtes concernées par l'affirmation.</li>
       <li>Chaque bonne réponse rapporte plus que la précédente : 100, 200, 300…</li>
       <li><b>Stop</b> : vous encaissez la cagnotte de la question.</li>
       <li><b>Erreur</b> : vous n'encaissez que la moitié.</li>
+      <li>Après chaque question, une explication s'affiche (chrono en pause).</li>
       <li>Chrono global : <b id="rule-time"></b> secondes.</li>
     </ul>
     <button id="btn-start" class="big">Jouer</button>
@@ -35,8 +36,12 @@
       <p id="question"></p>
       <small id="progress"></small>
     </div>
-    <div id="grid" class="grid"></div>
+    <div id="board" class="board"></div>
     <div id="feedback" class="feedback"></div>
+    <div id="info" class="info hidden">
+      <p id="info-text"></p>
+      <button id="btn-next" class="big">Question suivante</button>
+    </div>
     <button id="btn-stop" class="big stop">Stop — encaisser <span id="stop-val">0</span></button>
   </section>
 
