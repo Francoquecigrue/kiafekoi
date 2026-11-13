@@ -2,8 +2,8 @@
   // ---- Modes de jeu ----
   const MODES = {
     relax: {
-      name: "Relax", desc: "Sans chrono : toutes les questions, à votre rythme.",
-      relax: true, best: "high",
+      name: "Relax", desc: "Sans chrono : 20 questions, à votre rythme.",
+      questions: 20, best: "high",
     },
     classic: {
       name: "Classique", desc: "90 secondes pour marquer un max de points.",
@@ -329,7 +329,7 @@
   function isLastQuestion() {
     if (state.mode === "survival") return state.lives <= 0;
     if (state.mode === "chrono") return state.asked >= state.M.questions;
-    if (state.mode === "relax") return state.asked >= QUESTIONS.length;
+    if (state.mode === "relax") return state.asked >= state.M.questions;
     return false;
   }
 
@@ -402,8 +402,8 @@
     const m = state.mode, M = state.M;
     let ratio = 1, low = false;
     if (m === "relax") {
-      setHud("Score", state.score, "Question", `${state.asked}/${QUESTIONS.length}`, "Cagnotte", state.pot);
-      ratio = (state.asked - (state.locked ? 0 : 1)) / QUESTIONS.length;
+      setHud("Score", state.score, "Question", `${state.asked}/${M.questions}`, "Cagnotte", state.pot);
+      ratio = (state.asked - (state.locked ? 0 : 1)) / M.questions;
     } else if (m === "classic") {
       const t = Math.ceil(state.timeLeft);
       setHud("Score", state.score, "Temps", t, "Cagnotte", state.pot);
