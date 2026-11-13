@@ -1,5 +1,7 @@
-# Qui est concerné ? — Présidentielle 2027 (stop ou encore)
+# Kiafekoi ? — Présidentielle 2027 (stop ou encore)
 
+
+Jouer : https://francoquecigrue.github.io/kiafekoi/
 Jeu web mobile, sans dépendance. Ouvrir `index.html` ou publier via GitHub Pages.
 
 - `data.js` : candidats, questions et explications. Les faits datent du 13/11/2026 et sont à mettre à jour avec l'actualité.
