@@ -1,6 +1,10 @@
 (() => {
   // ---- Modes de jeu ----
   const MODES = {
+    relax: {
+      name: "Relax", desc: "Sans chrono : toutes les questions, à votre rythme.",
+      relax: true, best: "high",
+    },
     classic: {
       name: "Classique", desc: "90 secondes pour marquer un max de points.",
       duration: 90, best: "high",
@@ -237,7 +241,7 @@
     } else if (state.mode === "survival") {
       state.qLeft -= dt;
       if (state.qLeft <= 0) { state.qLeft = 0; return fail("Temps écoulé !"); }
-    } else {
+    } else if (state.mode === "chrono") {
       state.elapsed += dt;
     }
     updateHud();
@@ -325,6 +329,7 @@
   function isLastQuestion() {
     if (state.mode === "survival") return state.lives <= 0;
     if (state.mode === "chrono") return state.asked >= state.M.questions;
+    if (state.mode === "relax") return state.asked >= QUESTIONS.length;
     return false;
   }
 
@@ -341,6 +346,7 @@
     }
     $("info-text").textContent = state.current.info || "";
     $("btn-next").textContent = isLastQuestion() ? "Voir le résultat" : "Question suivante";
+    $("btn-quit").classList.toggle("hidden", state.mode !== "relax" || isLastQuestion());
     $("info").classList.remove("hidden");
     $("btn-stop").classList.add("hidden");
     updateHud();
@@ -363,7 +369,7 @@
     const best = getBest(m);
     const isRecord = best === null || (M.best === "low" ? result < best : result > best);
     if (isRecord && (M.best === "low" || result > 0)) localStorage.setItem(bestKey(m), result);
-    const titles = { classic: "Temps écoulé", survival: "Plus de vies", chrono: "Arrivée !" };
+    const titles = { relax: "Partie terminée", classic: "Temps écoulé", survival: "Plus de vies", chrono: "Arrivée !" };
     $("end-title").textContent = titles[m];
     $("final-label").textContent = M.best === "low" ? "Temps" : "Score";
     $("final-score").textContent = fmtResult(m, result);
@@ -373,7 +379,7 @@
     $("new-record").classList.toggle("hidden", !showRecord);
     const s = state.stats;
     const parts = [`${s.complete} complète(s)`, `${s.stops} ${m === "chrono" ? "passée(s)" : "stop"}`, `${s.errors} erreur(s)`];
-    if (m === "survival") parts.unshift(`${state.asked} manche(s) jouée(s)`);
+    if (m === "survival" || m === "relax") parts.unshift(`${state.asked} question(s) jouée(s)`);
     $("stats").textContent = parts.join(" · ");
     if (showRecord) sfxWin();
     show("screen-end");
@@ -395,7 +401,10 @@
     if (!state) return;
     const m = state.mode, M = state.M;
     let ratio = 1, low = false;
-    if (m === "classic") {
+    if (m === "relax") {
+      setHud("Score", state.score, "Question", `${state.asked}/${QUESTIONS.length}`, "Cagnotte", state.pot);
+      ratio = (state.asked - (state.locked ? 0 : 1)) / QUESTIONS.length;
+    } else if (m === "classic") {
       const t = Math.ceil(state.timeLeft);
       setHud("Score", state.score, "Temps", t, "Cagnotte", state.pot);
       ratio = state.timeLeft / M.duration; low = t <= 10;
@@ -452,4 +461,5 @@
   $("btn-menu").addEventListener("click", () => { renderMenu(); show("screen-start"); });
   $("btn-stop").addEventListener("click", onStop);
   $("btn-next").addEventListener("click", onNext);
+  $("btn-quit").addEventListener("click", () => { if (state && !state.over) endGame(); });
 })();
