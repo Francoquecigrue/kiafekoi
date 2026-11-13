@@ -113,4 +113,7 @@ const QUESTIONS = [
   { q: "A lancé sa chaîne Twitch",
     a: ["melenchon"],
     info: "« Twitchons », lancée en 2020. Attal a bien fait un live sur Twitch, mais sans chaîne à lui." },
+  { q: "Était contre le mariage pour tous",
+    a: ["lepen", "retailleau", "nda", "zemmour"],
+    info: "En 2013, Dupont-Aignan vote contre et Retailleau réclame un référendum. Le Pen promettait de l'abroger en 2017, puis en fait un « acquis » en 2022. Zemmour juge la loi « une erreur », mais dit qu'il ne l'abrogera pas. Philippe s'était abstenu." },
 ];
