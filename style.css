@@ -64,3 +64,17 @@ button.stop:disabled { opacity: .4; }
 
 .feedback { min-height: 1.6em; text-align: center; font-weight: 700; padding: 8px 0; }
 .feedback.good { color: #3ddc84; } .feedback.bad { color: #ff4f5e; } .feedback.info { color: #ffcc33; }
+
+.hint { opacity: .85; font-size: .95rem; margin: 0 0 6px; max-width: 360px; }
+.modes { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 360px; }
+.mode { border: 0; border-radius: 14px; padding: 12px 14px; text-align: left; background: rgba(255,255,255,.1);
+  color: #fff; cursor: pointer; touch-action: manipulation; border: 2px solid rgba(255,255,255,.15); }
+.mode:active { transform: scale(.98); }
+.mode b { font-size: 1.1rem; display: block; }
+.mode span { font-size: .85rem; opacity: .8; display: block; margin-top: 2px; }
+.mode small { font-size: .75rem; color: #ffcc33; display: block; margin-top: 4px; }
+.sound { margin-top: 8px; background: none; border: 1px solid rgba(255,255,255,.3); color: #fff; border-radius: 20px; padding: 6px 14px; font-size: .9rem; }
+button.ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.4); }
+.face.off { pointer-events: none; }
+#screen-game { overflow-y: auto; }
+.info p { font-size: .85rem; }

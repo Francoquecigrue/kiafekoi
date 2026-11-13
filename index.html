@@ -12,24 +12,17 @@
 <main id="app">
   <section id="screen-start" class="screen active">
     <h1>Qui est<br>concerné&nbsp;?</h1>
-    <p class="sub">Présidentielle 2027 — Stop ou encore</p>
-    <ul class="rules">
-      <li>Touchez <b>toutes</b> les têtes concernées par l'affirmation.</li>
-      <li>Chaque bonne réponse rapporte plus que la précédente : 100, 200, 300…</li>
-      <li><b>Stop</b> : vous encaissez la cagnotte de la question.</li>
-      <li><b>Erreur</b> : vous n'encaissez que la moitié.</li>
-      <li>Après chaque question, une explication s'affiche (chrono en pause).</li>
-      <li>Chrono global : <b id="rule-time"></b> secondes.</li>
-    </ul>
-    <button id="btn-start" class="big">Jouer</button>
-    <p class="best">Record : <span id="best-start">0</span></p>
+    <p class="sub">Présidentielle 2027</p>
+    <p class="hint">Touchez <b>toutes</b> les têtes concernées. 100, puis 200, puis 300 points… Une erreur et vous ne gardez que la moitié de la cagnotte.</p>
+    <div id="modes" class="modes"></div>
+    <button id="btn-sound" class="sound"></button>
   </section>
 
   <section id="screen-game" class="screen">
     <header class="hud">
-      <div><small>Score</small><b id="score">0</b></div>
-      <div class="timer"><small>Temps</small><b id="time">0</b></div>
-      <div><small>Cagnotte</small><b id="pot">0</b></div>
+      <div><small id="hud1-label"></small><b id="hud1"></b></div>
+      <div class="timer"><small id="hud2-label"></small><b id="time"></b></div>
+      <div><small id="hud3-label"></small><b id="hud3"></b></div>
     </header>
     <div class="timebar"><div id="timebar-fill"></div></div>
     <div class="question">
@@ -42,16 +35,17 @@
       <p id="info-text"></p>
       <button id="btn-next" class="big">Question suivante</button>
     </div>
-    <button id="btn-stop" class="big stop">Stop — encaisser <span id="stop-val">0</span></button>
+    <button id="btn-stop" class="big stop"></button>
   </section>
 
   <section id="screen-end" class="screen">
-    <h2>Temps écoulé</h2>
-    <p class="final">Score : <b id="final-score">0</b></p>
+    <h2 id="end-title"></h2>
+    <p class="final"><span id="final-label"></span> : <b id="final-score">0</b></p>
     <p id="new-record" class="record hidden">Nouveau record&nbsp;!</p>
     <p class="best">Record : <span id="best-end">0</span></p>
     <p class="stats" id="stats"></p>
     <button id="btn-restart" class="big">Rejouer</button>
+    <button id="btn-menu" class="big ghost">Changer de mode</button>
   </section>
 </main>
 <script src="data.js"></script>

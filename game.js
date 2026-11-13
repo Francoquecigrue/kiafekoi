@@ -1,15 +1,27 @@
 (() => {
-  // ---- Réglages ----
-  const GAME_DURATION = 90;    // secondes
+  // ---- Modes de jeu ----
+  const MODES = {
+    classic: {
+      name: "Classique", desc: "90 secondes pour marquer un max de points.",
+      duration: 90, best: "high",
+    },
+    survival: {
+      name: "Survie", desc: "3 vies, 15 s par question. Erreur ou temps écoulé : une vie en moins.",
+      lives: 3, qTime: 15, best: "high",
+    },
+    chrono: {
+      name: "Contre la montre", desc: "10 questions, toutes les têtes à trouver. Erreur : +5 s. Passer : +10 s.",
+      questions: 10, penalty: 5, passPenalty: 10, best: "low",
+    },
+  };
   const STEP = 100;            // 1re trouvaille = 100, 2e = 200, 3e = 300…
   const COLS = 4, ROWS = 3;    // 12 têtes
-  const BEST_KEY = "quiz-presidentielle-2027-best";
 
   const $ = (id) => document.getElementById(id);
   const faces = {};            // id -> élément
   let columns = [];            // columns[c] = ids de bas en haut
   let cellW = 0, cellH = 0;
-  let state;
+  let state = null;
 
   const shuffle = (arr) => {
     const a = arr.slice();
@@ -24,18 +36,35 @@
     document.querySelectorAll(".screen").forEach((s) => s.classList.remove("active"));
     $(screen).classList.add("active");
   };
-  const getBest = () => Number(localStorage.getItem(BEST_KEY) || 0);
+  const fmtTime = (s) => {
+    const m = Math.floor(s / 60), r = s - m * 60;
+    return m ? `${m}:${r.toFixed(1).padStart(4, "0")}` : `${r.toFixed(1)} s`;
+  };
+  const bestKey = (m) => `qec2027-best-${m}`;
+  const getBest = (m) => { const v = localStorage.getItem(bestKey(m)); return v === null ? null : Number(v); };
+  const fmtResult = (m, v) => (MODES[m].best === "low" ? fmtTime(v) : `${v} pts`);
 
   // ---- Son ----
   // audio/<id>.mp3 si présent, sinon un « bip vocal » synthétique propre à chaque candidat.
-  let actx = null;
+  let soundOn = localStorage.getItem("qec2027-sound") !== "off";
+  let actx = null, master = null;
   const clips = {};
-  function initAudio() {
+
+  function unlockAudio() {
+    // iOS : joue même si le téléphone est en mode silencieux (Safari 17+).
+    try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (e) {}
     if (!actx) {
       const AC = window.AudioContext || window.webkitAudioContext;
-      if (AC) actx = new AC();
+      if (!AC) return;
+      actx = new AC();
+      master = actx.createGain();
+      master.gain.value = 0.9;
+      master.connect(actx.destination);
+      // Petit son vide pour déverrouiller l'audio sur iOS.
+      const b = actx.createBuffer(1, 1, 22050), src = actx.createBufferSource();
+      src.buffer = b; src.connect(actx.destination); src.start(0);
     }
-    if (actx && actx.state === "suspended") actx.resume();
+    if (actx.state !== "running") actx.resume();
   }
   function loadClips() {
     for (const c of CANDIDATES) {
@@ -45,25 +74,26 @@
       a.src = `audio/${c.id}.mp3`;
     }
   }
-  function tone(freq, start, dur, type = "sawtooth", vol = 0.18) {
-    if (!actx) return;
+  function tone(freq, start, dur, type = "square", vol = 0.35) {
+    if (!soundOn || !actx) return;
     const t = actx.currentTime + start;
-    const o = actx.createOscillator(), g = actx.createGain(), f = actx.createBiquadFilter();
-    o.type = type; o.frequency.setValueAtTime(freq, t);
-    o.frequency.exponentialRampToValueAtTime(freq * 0.85, t + dur);
-    f.type = "bandpass"; f.frequency.value = freq * 3; f.Q.value = 1.5;
-    g.gain.setValueAtTime(0, t);
-    g.gain.linearRampToValueAtTime(vol, t + 0.01);
-    g.gain.exponentialRampToValueAtTime(0.001, t + dur);
-    o.connect(f).connect(g).connect(actx.destination);
-    o.start(t); o.stop(t + dur + 0.02);
+    const o = actx.createOscillator(), g = actx.createGain();
+    o.type = type;
+    o.frequency.setValueAtTime(freq, t);
+    o.frequency.exponentialRampToValueAtTime(freq * 0.8, t + dur);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + 0.015);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g).connect(master);
+    o.start(t); o.stop(t + dur + 0.05);
   }
   function voiceOf(id) {
     let h = 0;
     for (const ch of id) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
-    return { base: 140 + (h % 160), pattern: [1, 1.25 + (h % 3) * 0.1, 0.9 + (h % 5) * 0.05] };
+    return { base: 220 + (h % 220), pattern: [1, 1.2 + (h % 3) * 0.12, 0.85 + (h % 5) * 0.06] };
   }
   function playCandidate(id) {
+    if (!soundOn) return;
     const clip = clips[id];
     if (clip) {
       const a = clip.cloneNode();
@@ -71,11 +101,12 @@
       return;
     }
     const v = voiceOf(id);
-    v.pattern.forEach((m, i) => tone(v.base * m, i * 0.07, 0.09));
+    v.pattern.forEach((m, i) => tone(v.base * m, i * 0.09, 0.12));
   }
-  const sfxWrong = () => { tone(110, 0, 0.25, "square", 0.15); tone(90, 0.12, 0.3, "square", 0.15); };
-  const sfxWin = () => [523, 659, 784, 1046].forEach((f, i) => tone(f, i * 0.08, 0.15, "triangle", 0.15));
-  const sfxBank = () => [784, 1046].forEach((f, i) => tone(f, i * 0.07, 0.12, "triangle", 0.12));
+  const sfxWrong = () => { tone(140, 0, 0.25, "sawtooth"); tone(100, 0.15, 0.35, "sawtooth"); };
+  const sfxWin = () => [523, 659, 784, 1046].forEach((f, i) => tone(f, i * 0.08, 0.18, "triangle", 0.4));
+  const sfxBank = () => [784, 1046].forEach((f, i) => tone(f, i * 0.07, 0.15, "triangle", 0.4));
+  function renderSoundBtn() { $("btn-sound").textContent = soundOn ? "🔊 Son activé" : "🔇 Son coupé"; }
 
   // ---- Plateau avec gravité ----
   function buildFaces() {
@@ -115,7 +146,6 @@
     }
   }
 
-  // Place chaque tête selon sa colonne et sa hauteur dans la pile.
   function layout() {
     columns.forEach((col, c) => {
       col.forEach((id, r) => {
@@ -161,10 +191,11 @@
     }, 230);
   }
 
-  function floatGain(el, txt) {
+  function floatText(el, txt, color) {
     const g = document.createElement("div");
     g.className = "gain";
     g.textContent = txt;
+    if (color) g.style.color = color;
     g.style.left = parseFloat(el.style.left) + cellW / 2 + "px";
     g.style.top = parseFloat(el.style.top) + cellH * 0.3 + "px";
     $("board").appendChild(g);
@@ -172,11 +203,13 @@
   }
 
   // ---- Partie ----
-  function startGame() {
-    initAudio();
+  function startGame(mode) {
+    unlockAudio();
+    const M = MODES[mode];
     state = {
-      score: 0, timeLeft: GAME_DURATION, deck: [], current: null,
-      found: new Set(), pot: 0, locked: false, timerId: null,
+      mode, M, score: 0, deck: [], current: null, asked: 0,
+      found: new Set(), pot: 0, locked: false, timerId: null, over: false,
+      timeLeft: M.duration || 0, lives: M.lives || 0, qLeft: 0, elapsed: 0,
       stats: { complete: 0, stops: 0, errors: 0 },
     };
     show("screen-game");
@@ -185,25 +218,38 @@
     Object.values(faces).forEach((el) => { el.style.display = "none"; });
     nextQuestion(true);
     let last = performance.now();
-    state.timerId = setInterval(() => {
-      const now = performance.now();
-      if (!state.locked) state.timeLeft -= (now - last) / 1000;
-      last = now;
-      if (state.timeLeft <= 0) { state.timeLeft = 0; endGame(); }
-      updateTimer();
-    }, 100);
+    clearInterval(state.timerId);
+    state.timerId = setInterval(() => tick(performance.now() - last, (last = performance.now())), 100);
+  }
+
+  function tick(dtMs) {
+    if (!state || state.over || state.locked) { updateHud(); return; }
+    const dt = dtMs / 1000;
+    if (state.mode === "classic") {
+      state.timeLeft -= dt;
+      if (state.timeLeft <= 0) { state.timeLeft = 0; state.score += state.pot; state.pot = 0; return endGame(); }
+    } else if (state.mode === "survival") {
+      state.qLeft -= dt;
+      if (state.qLeft <= 0) { state.qLeft = 0; return fail("Temps écoulé !"); }
+    } else {
+      state.elapsed += dt;
+    }
+    updateHud();
   }
 
   function nextQuestion(firstTime) {
     if (state.deck.length === 0) state.deck = shuffle(QUESTIONS);
     state.current = state.deck.pop();
+    state.asked++;
     state.found = new Set();
     state.pot = 0;
     state.locked = false;
-    Object.values(faces).forEach((el) => el.classList.remove("wrong", "missed", "dim"));
+    state.qLeft = state.M.qTime || 0;
+    Object.values(faces).forEach((el) => el.classList.remove("wrong", "missed", "dim", "off"));
     $("question").textContent = state.current.q;
     $("info").classList.add("hidden");
     $("btn-stop").classList.remove("hidden");
+    $("screen-game").scrollTop = 0;
     feedback("", "");
     refill(firstTime);
     updateHud();
@@ -213,22 +259,22 @@
 
   function onPick(id, el) {
     if (!state || state.locked || state.found.has(id)) return;
-    initAudio();
+    unlockAudio();
     playCandidate(id);
     const answers = state.current.a;
     if (answers.includes(id)) {
       const gain = nextValue();
-      state.pot += gain;
       state.found.add(id);
-      floatGain(el, "+" + gain);
-      removeFace(id);
       vibrate(20);
+      if (state.mode === "chrono") floatText(el, "✓");
+      else { state.pot += gain; floatText(el, "+" + gain); }
+      removeFace(id);
       if (state.found.size === answers.length) {
         state.stats.complete++;
         sfxWin();
-        bank(state.pot, `Toutes trouvées ! +${state.pot}`, "good");
+        endQuestion(state.pot, state.mode === "chrono" ? "Toutes trouvées !" : `Toutes trouvées ! +${state.pot}`, "good");
       } else {
-        feedback(`+${gain} — la suivante vaut ${nextValue()}`, "good");
+        feedback(state.mode === "chrono" ? "Bien vu !" : `+${gain} — la suivante vaut ${nextValue()}`, "good");
         updateHud();
       }
     } else {
@@ -236,21 +282,48 @@
       vibrate([60, 40, 60]);
       setTimeout(sfxWrong, 150);
       state.stats.errors++;
-      const half = Math.floor(state.pot / 2);
-      bank(half, state.pot ? `Raté ! Moitié encaissée : +${half}` : "Raté ! +0", "bad");
+      if (state.mode === "chrono") {
+        // La question continue, avec une pénalité.
+        state.elapsed += state.M.penalty;
+        el.classList.add("off", "dim");
+        floatText(el, `+${state.M.penalty} s`, "#ff4f5e");
+        feedback(`Raté ! +${state.M.penalty} s de pénalité`, "bad");
+        updateHud();
+      } else {
+        fail("Raté !");
+      }
     }
+  }
+
+  // Erreur ou temps écoulé (classique / survie) : moitié de la cagnotte.
+  function fail(prefix) {
+    const half = Math.floor(state.pot / 2);
+    if (state.mode === "survival") state.lives--;
+    let msg = state.pot ? `${prefix} Moitié encaissée : +${half}` : `${prefix} +0`;
+    if (state.mode === "survival") msg += state.lives > 0 ? ` — ${state.lives} vie(s)` : " — plus de vie";
+    endQuestion(half, msg, "bad");
   }
 
   function onStop() {
     if (!state || state.locked) return;
-    initAudio();
+    unlockAudio();
     state.stats.stops++;
+    if (state.mode === "chrono") {
+      state.elapsed += state.M.passPenalty;
+      return endQuestion(0, `Passée : +${state.M.passPenalty} s`, "info");
+    }
     if (state.pot) sfxBank();
-    bank(state.pot, state.pot ? `Stop ! +${state.pot}` : "Question passée", "info");
+    endQuestion(state.pot, state.pot ? `Stop ! +${state.pot}` : "Question passée", "info");
+  }
+
+  function isLastQuestion() {
+    if (state.mode === "survival") return state.lives <= 0;
+    if (state.mode === "chrono") return state.asked >= state.M.questions;
+    return false;
   }
 
   // Encaisse, montre la correction et l'explication (chrono en pause).
-  function bank(points, msg, kind) {
+  function endQuestion(points, msg, kind) {
     state.locked = true;
     state.score += points;
     state.pot = 0;
@@ -261,25 +334,42 @@
       else if (!el.classList.contains("wrong")) el.classList.add("dim");
     }
     $("info-text").textContent = state.current.info || "";
+    $("btn-next").textContent = isLastQuestion() ? "Voir le résultat" : "Question suivante";
     $("info").classList.remove("hidden");
     $("btn-stop").classList.add("hidden");
     updateHud();
+    requestAnimationFrame(() => $("btn-next").scrollIntoView({ behavior: "smooth", block: "end" }));
+  }
+
+  function onNext() {
+    if (!state || state.over) return;
+    if (isLastQuestion()) return endGame();
+    if (state.mode === "classic" && state.timeLeft <= 0) return endGame();
+    nextQuestion(false);
   }
 
   function endGame() {
     clearInterval(state.timerId);
-    state.score += state.pot; // temps écoulé : la cagnotte en cours est encaissée
-    state.pot = 0;
+    state.over = true;
     state.locked = true;
-    const best = getBest();
-    const isRecord = state.score > best;
-    if (isRecord) localStorage.setItem(BEST_KEY, state.score);
-    $("final-score").textContent = state.score;
-    $("best-end").textContent = Math.max(best, state.score);
-    $("new-record").classList.toggle("hidden", !isRecord);
+    const m = state.mode, M = state.M;
+    const result = M.best === "low" ? Math.round(state.elapsed * 10) / 10 : state.score;
+    const best = getBest(m);
+    const isRecord = best === null || (M.best === "low" ? result < best : result > best);
+    if (isRecord && (M.best === "low" || result > 0)) localStorage.setItem(bestKey(m), result);
+    const titles = { classic: "Temps écoulé", survival: "Plus de vies", chrono: "Arrivée !" };
+    $("end-title").textContent = titles[m];
+    $("final-label").textContent = M.best === "low" ? "Temps" : "Score";
+    $("final-score").textContent = fmtResult(m, result);
+    const newBest = getBest(m);
+    $("best-end").textContent = newBest === null ? "—" : fmtResult(m, newBest);
+    const showRecord = isRecord && (M.best === "low" || result > 0);
+    $("new-record").classList.toggle("hidden", !showRecord);
     const s = state.stats;
-    $("stats").textContent = `${s.complete} question(s) complète(s) · ${s.stops} stop · ${s.errors} erreur(s)`;
-    if (isRecord) sfxWin();
+    const parts = [`${s.complete} complète(s)`, `${s.stops} ${m === "chrono" ? "passée(s)" : "stop"}`, `${s.errors} erreur(s)`];
+    if (m === "survival") parts.unshift(`${state.asked} manche(s) jouée(s)`);
+    $("stats").textContent = parts.join(" · ");
+    if (showRecord) sfxWin();
     show("screen-end");
   }
 
@@ -289,34 +379,71 @@
     $("feedback").className = "feedback " + kind;
   }
 
-  function updateHud() {
-    $("score").textContent = state.score;
-    $("pot").textContent = state.pot;
-    $("stop-val").textContent = state.pot;
-    $("btn-stop").firstChild.textContent = state.pot ? "Stop — encaisser " : "Passer ";
-    $("stop-val").style.display = state.pot ? "" : "none";
-    const n = state.current ? state.current.a.length : 0;
-    $("progress").textContent = state.current ? `${state.found.size} / ${n} trouvée(s)` : "";
-    updateTimer();
+  function setHud(l1, v1, l2, v2, l3, v3) {
+    $("hud1-label").textContent = l1; $("hud1").textContent = v1;
+    $("hud2-label").textContent = l2; $("time").textContent = v2;
+    $("hud3-label").textContent = l3; $("hud3").textContent = v3;
   }
 
-  function updateTimer() {
-    const t = Math.ceil(state.timeLeft);
-    $("time").textContent = t;
-    $("time").parentElement.classList.toggle("low", t <= 10);
-    $("timebar-fill").style.width = (100 * state.timeLeft / GAME_DURATION) + "%";
+  function updateHud() {
+    if (!state) return;
+    const m = state.mode, M = state.M;
+    let ratio = 1, low = false;
+    if (m === "classic") {
+      const t = Math.ceil(state.timeLeft);
+      setHud("Score", state.score, "Temps", t, "Cagnotte", state.pot);
+      ratio = state.timeLeft / M.duration; low = t <= 10;
+    } else if (m === "survival") {
+      const t = Math.ceil(state.qLeft);
+      setHud("Score", state.score, "Temps", t, "Vies", "❤️".repeat(Math.max(state.lives, 0)) || "—");
+      ratio = state.qLeft / M.qTime; low = t <= 5;
+    } else {
+      setHud("Question", `${state.asked}/${M.questions}`, "Chrono", fmtTime(state.elapsed), "Erreurs", state.stats.errors);
+      ratio = (state.asked - (state.locked ? 0 : 1)) / M.questions;
+    }
+    $("time").parentElement.classList.toggle("low", low && !state.locked);
+    $("timebar-fill").style.width = Math.max(0, Math.min(1, ratio)) * 100 + "%";
+
+    const stop = $("btn-stop");
+    if (m === "chrono") stop.textContent = `Passer (+${M.passPenalty} s)`;
+    else stop.textContent = state.pot ? `Stop — encaisser ${state.pot}` : "Passer";
+    const n = state.current ? state.current.a.length : 0;
+    $("progress").textContent = state.current ? `${state.found.size} / ${n} trouvée(s)` : "";
   }
 
   const vibrate = (p) => { if (navigator.vibrate) navigator.vibrate(p); };
 
+  // ---- Menu ----
+  function renderMenu() {
+    const box = $("modes");
+    box.innerHTML = "";
+    for (const [key, M] of Object.entries(MODES)) {
+      const b = document.createElement("button");
+      b.className = "mode";
+      const best = getBest(key);
+      b.innerHTML = `<b></b><span></span><small></small>`;
+      b.querySelector("b").textContent = M.name;
+      b.querySelector("span").textContent = M.desc;
+      b.querySelector("small").textContent = best === null ? "Pas encore de record" : `Record : ${fmtResult(key, best)}`;
+      b.addEventListener("click", () => startGame(key));
+      box.appendChild(b);
+    }
+    renderSoundBtn();
+  }
+
   // ---- Init ----
-  $("rule-time").textContent = GAME_DURATION;
-  $("best-start").textContent = getBest();
   buildFaces();
   loadClips();
-  window.addEventListener("resize", () => { if (state) { measure(); layout(); } });
-  $("btn-start").addEventListener("click", startGame);
-  $("btn-restart").addEventListener("click", startGame);
+  renderMenu();
+  window.addEventListener("resize", () => { if (state && !state.over) { measure(); layout(); } });
+  $("btn-sound").addEventListener("click", () => {
+    soundOn = !soundOn;
+    localStorage.setItem("qec2027-sound", soundOn ? "on" : "off");
+    renderSoundBtn();
+    if (soundOn) { unlockAudio(); sfxBank(); }
+  });
+  $("btn-restart").addEventListener("click", () => startGame(state.mode));
+  $("btn-menu").addEventListener("click", () => { renderMenu(); show("screen-start"); });
   $("btn-stop").addEventListener("click", onStop);
-  $("btn-next").addEventListener("click", () => { if (state && state.timeLeft > 0) nextQuestion(false); });
+  $("btn-next").addEventListener("click", onNext);
 })();
