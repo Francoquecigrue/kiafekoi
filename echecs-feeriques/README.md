@@ -32,3 +32,7 @@ node scripts/verify.js       # revérifie puzzles.js
 
 Pour ajouter une pièce : la définir dans `TYPES` (`engine.js`), lui donner une fiche dans `pieces.js`,
 un équivalent dans `ANALOG` et un chapitre dans `CHAPTERS` (`scripts/generate.js`).
+
+## Crédits
+Pièces classiques (`pieces/`) : jeu « cburnett » de Colin M.L. Burnett, licence CC BY-SA 3.0
+(https://creativecommons.org/licenses/by-sa/3.0/). Pièces féeriques : emoji du système.

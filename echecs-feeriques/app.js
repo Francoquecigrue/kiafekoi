@@ -82,12 +82,11 @@ function drawIntro(at) {
 }
 
 // ---------- Dessin de l'échiquier ----------
-const GLYPH = { K: '♚', Q: '♛', R: '♜', B: '♝', N: '♞', P: '♟' };
 const pct = v => (v * 12.5) + '%';
 
 function pieceHTML(p) {
   const t = E.typeOf(p);
-  if (GLYPH[t]) return `<span class="g">${GLYPH[t]}︎</span>`;
+  if ('KQRBNP'.includes(t)) return `<img src="pieces/${E.colorOf(p)}${t}.svg" alt="">`;
   return `<span class="fairy">${PIECE_BY_ID[t].icon}</span>`;
 }
 
