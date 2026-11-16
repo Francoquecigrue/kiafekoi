@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#1b1433">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>La Ménagerie — puzzles d'échecs féeriques</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+
+  <section id="screen-home" class="screen active">
+    <header class="home-head">
+      <h1>La Ménagerie</h1>
+      <p class="sub">Puzzles d'échecs féeriques</p>
+    </header>
+    <p class="hint">Résolvez les problèmes de chaque pièce pour en découvrir une nouvelle.</p>
+    <div id="chapters" class="chapters"></div>
+    <button id="btn-reset" class="link">Effacer la progression</button>
+  </section>
+
+  <section id="screen-intro" class="screen">
+    <header class="bar">
+      <button class="icon" data-back aria-label="Retour">‹</button>
+      <span id="intro-kicker">Nouvelle pièce</span>
+      <span></span>
+    </header>
+    <div class="card intro">
+      <div id="intro-icon" class="intro-icon"></div>
+      <h2 id="intro-name"></h2>
+      <p id="intro-rules"></p>
+      <div id="intro-board" class="board small"></div>
+      <p id="intro-legend" class="legend">Les points montrent les cases où elle peut aller. Touchez une case vide pour la déplacer.</p>
+      <p id="intro-tip" class="tip"></p>
+    </div>
+    <button id="btn-intro-go" class="big">Aux problèmes</button>
+  </section>
+
+  <section id="screen-puzzle" class="screen">
+    <header class="bar">
+      <button class="icon" data-back aria-label="Retour">‹</button>
+      <span id="pz-title"></span>
+      <button class="icon" id="btn-rules" aria-label="Règles de la pièce">?</button>
+    </header>
+    <div id="pz-dots" class="dots"></div>
+    <div class="objective">
+      <b id="pz-goal"></b>
+      <small>Les Blancs jouent</small>
+    </div>
+    <div id="board" class="board"></div>
+    <p id="pz-status" class="status"></p>
+    <div class="actions">
+      <button id="btn-hint" class="pill">💡 Indice</button>
+      <button id="btn-retry" class="pill">↺ Recommencer</button>
+    </div>
+    <div id="pz-done" class="done hidden">
+      <p id="pz-done-text"></p>
+      <button id="btn-next" class="big">Suivant</button>
+    </div>
+  </section>
+
+  <div id="modal" class="modal hidden">
+    <div class="card">
+      <div id="modal-icon" class="intro-icon"></div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+      <button id="modal-btn" class="big">OK</button>
+      <button id="modal-cancel" class="pill hidden">Annuler</button>
+    </div>
+  </div>
+
+</main>
+<script src="engine.js"></script>
+<script src="pieces.js"></script>
+<script src="puzzles.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
