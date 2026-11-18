@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chansons de lutte — jouer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="entete">
+  <h1>Chansons de lutte</h1>
+  <p>Lecture à l'aveugle : le titre n'est affiché qu'à la demande. <a href="./">Voir les cartes</a></p>
+</header>
+
+<main class="jeu">
+  <section class="bloc" id="bloc-connexion">
+    <h2>1. Connexion Spotify (compte Premium)</h2>
+    <div class="ligne" id="ligne-client">
+      <input type="text" id="client-id" placeholder="Client ID de l'application Spotify" autocomplete="off" spellcheck="false">
+    </div>
+    <p class="etat">URI de redirection à déclarer dans le tableau de bord Spotify :<br><code id="uri-redirection"></code></p>
+    <div class="ligne">
+      <button type="button" id="connexion">Se connecter</button>
+      <button type="button" id="deconnexion" class="secondaire cache">Se déconnecter</button>
+      <span class="etat" id="etat-connexion">Non connecté.</span>
+    </div>
+  </section>
+
+  <section class="bloc">
+    <h2>2. Où jouer le son</h2>
+    <div class="ligne">
+      <label><input type="radio" name="mode" value="sdk" checked> Dans ce navigateur (Web Playback SDK)</label>
+      <label><input type="radio" name="mode" value="connect"> Sur un appareil Spotify (téléphone, enceinte)</label>
+    </div>
+    <div class="ligne" id="ligne-appareils" hidden>
+      <select id="appareils"></select>
+      <button type="button" id="rafraichir-appareils" class="secondaire">Actualiser</button>
+    </div>
+    <p class="etat" id="etat-lecteur">Lecteur non initialisé.</p>
+  </section>
+
+  <section class="bloc">
+    <h2>3. Choisir une carte</h2>
+    <div class="ligne">
+      <button type="button" id="scanner">Scanner un QR code</button>
+      <button type="button" id="hasard" class="secondaire">Carte au hasard</button>
+    </div>
+    <video id="video" class="cache" playsinline muted></video>
+    <div class="ligne" style="margin-top:.6rem">
+      <input type="text" id="saisie" placeholder="ou coller un lien, une URI ou un identifiant Spotify" spellcheck="false">
+      <button type="button" id="valider" class="secondaire">OK</button>
+    </div>
+    <p class="etat" id="etat-carte">Aucune carte choisie.</p>
+  </section>
+
+  <section class="bloc">
+    <h2>4. Écouter, deviner, révéler</h2>
+    <div class="disque" id="disque" aria-hidden="true"></div>
+    <div class="ligne" style="justify-content:center">
+      <button type="button" id="lecture" disabled>Lire</button>
+      <button type="button" id="pause" class="secondaire" disabled>Pause</button>
+      <button type="button" id="reveler" class="secondaire" disabled>Révéler</button>
+    </div>
+    <div id="revelation" class="cache" style="text-align:center;margin-top:.8rem"></div>
+  </section>
+
+  <section class="bloc">
+    <h2>Journal de test</h2>
+    <p class="etat">Ne contient jamais le titre joué. À copier pour signaler un problème.</p>
+    <div id="journal"></div>
+    <div class="ligne" style="margin-top:.5rem"><button type="button" id="copier-journal" class="secondaire">Copier le journal</button></div>
+  </section>
+</main>
+
+<script src="config.js"></script>
+<script src="vendor/jsQR.js"></script>
+<script src="jouer.js"></script>
+</body>
+</html>

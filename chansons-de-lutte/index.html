@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chansons de lutte — les cartes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="entete">
+  <h1>Chansons de lutte</h1>
+  <p>Un jeu de cartes musical : écoutez, devinez l'année, placez la carte sur votre ligne du temps.</p>
+  <nav><a href="jouer.html" class="bouton">Jouer (lecture à l'aveugle)</a></nav>
+</header>
+
+<section class="filtres" aria-label="Filtres">
+  <label>Pays <select id="f-pays"><option value="">Tous</option></select></label>
+  <label>Cause <select id="f-cause"><option value="">Toutes</option></select></label>
+  <label>Langue <select id="f-langue"><option value="">Toutes</option></select></label>
+  <label class="case"><input type="checkbox" id="f-cacher" checked> Cacher les titres</label>
+  <button type="button" id="tout-reveler">Tout révéler</button>
+  <span id="compte" aria-live="polite"></span>
+</section>
+
+<main id="grille" class="grille"></main>
+
+<footer class="pied">
+  Projet non commercial. Les titres sont lus via Spotify ; aucun extrait audio n'est hébergé ici.
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
