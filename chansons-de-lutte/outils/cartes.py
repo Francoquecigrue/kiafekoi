@@ -6,8 +6,15 @@ Sorties :
   qr/<id>.svg            QR codes vectoriels (utilisés par le site et le PDF)
   sortie/png/<id>.png    QR codes PNG 300 dpi
   cartes.json            données du site
-  sortie/cartes.html     mise en page d'impression (A4, 9 cartes par page)
+  sortie/cartes.html     une carte par page (aperçu), imposée ensuite sur SRA3
   sortie/cartes.pdf      PDF recto verso, rendu par Chrome ou Chromium
+
+Gabarit d'impression et de découpe (repris du modèle de production) :
+  planche SRA3 320 x 450 mm, 3 colonnes x 4 rangées, un seul exemplaire par carte ;
+  carte 94 x 94 mm avec 2 mm de fond perdu = 90 x 90 mm après découpe ;
+  zone utile 86 x 86 mm (2 mm de marge de sécurité intérieure) ;
+  coin haut gauche des cartes (fond perdu compris) : x = 13, 113, 213 mm ;
+  y = 23, 128, 233, 338 mm. Pages impaires = rectos, pages paires = versos.
 
 Contenu des QR codes :
   par défaut https://open.spotify.com/track/<id> : stable, indépendant de
@@ -22,6 +29,7 @@ import argparse
 import csv
 import html
 import json
+import re
 import os
 import shutil
 import subprocess
@@ -36,12 +44,17 @@ CSV = RACINE / "data" / "chansons.csv"
 DOSSIER_QR = RACINE / "qr"
 DOSSIER_SORTIE = RACINE / "sortie"
 
-CARTE_L, CARTE_H = 63, 88  # mm, format poker
-COLS, RANGS = 3, 3
-PAGE_L, PAGE_H = 210, 297  # A4
-MARGE_X = (PAGE_L - COLS * CARTE_L) / 2  # 10,5 mm
-MARGE_Y = (PAGE_H - RANGS * CARTE_H) / 2  # 16,5 mm
-QR_MM = 46
+PAGE_L, PAGE_H = 320, 450  # SRA3, mm
+POS_X = [13, 113, 213]  # coin haut gauche, fond perdu compris
+POS_Y = [23, 128, 233, 338]
+COLS, RANGS = len(POS_X), len(POS_Y)
+FOND_PERDU = 2
+CARTE = 90 + 2 * FOND_PERDU  # 94 mm avant découpe
+SECURITE = 2  # marge intérieure : zone utile 86 x 86 mm
+QR_MM = 54
+# Chrome arrondit la mise en page au pixel CSS (0,26 mm) : on rend les cartes
+# à l'échelle RENDU puis l'imposition les ramène exactement à 94 mm.
+RENDU = 4
 DPI = 300
 
 
@@ -108,16 +121,16 @@ def ecrire_qr(cartes, base_url):
 def taille_titre(titre):
     n = len(titre)
     if n <= 18:
-        return 5.2
+        return 6.0
     if n <= 32:
-        return 4.3
+        return 5.0
     if n <= 50:
-        return 3.6
-    return 3.0
+        return 4.2
+    return 3.4
 
 
 def taille_artistes(texte):
-    return 3.2 if len(texte) <= 40 else (2.6 if len(texte) <= 90 else 2.0)
+    return 3.6 if len(texte) <= 40 else (3.0 if len(texte) <= 90 else 2.3)
 
 
 def svg_inline(svg):
@@ -151,68 +164,89 @@ def verso(c):
 </div>"""
 
 
-def reperes():
-    """Traits de coupe dans les marges de la page."""
-    traits = []
-    xs = [MARGE_X + i * CARTE_L for i in range(COLS + 1)]
-    ys = [MARGE_Y + i * CARTE_H for i in range(RANGS + 1)]
-    for x in xs:
-        traits.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{MARGE_Y - 2}"/>')
-        traits.append(f'<line x1="{x}" y1="{PAGE_H - MARGE_Y + 2}" x2="{x}" y2="{PAGE_H}"/>')
-    for y in ys:
-        traits.append(f'<line x1="0" y1="{y}" x2="{MARGE_X - 2}" y2="{y}"/>')
-        traits.append(f'<line x1="{PAGE_L - MARGE_X + 2}" y1="{y}" x2="{PAGE_L}" y2="{y}"/>')
-    return (f'<svg class="reperes" viewBox="0 0 {PAGE_L} {PAGE_H}" '
-            f'stroke="#000" stroke-width="0.15">{"".join(traits)}</svg>')
-
-
 CSS = f"""
-@page {{ size: A4; margin: 0; }}
+@page {{ size: {CARTE}mm {CARTE}mm; margin: 0; }}
 * {{ box-sizing: border-box; }}
 html, body {{ margin: 0; padding: 0; }}
-body {{ font-family: "Noto Sans", "Noto Sans CJK SC", "Noto Sans Arabic", "Noto Sans Hebrew", "DejaVu Sans", sans-serif; color: #111; }}
-.page {{ width: {PAGE_L}mm; height: {PAGE_H}mm; position: relative; overflow: hidden; break-after: page; }}
-.page:last-child {{ break-after: auto; }}
-.reperes {{ position: absolute; inset: 0; width: {PAGE_L}mm; height: {PAGE_H}mm; }}
-.grille {{ position: absolute; left: {MARGE_X}mm; top: {MARGE_Y}mm; display: grid;
-  grid-template-columns: repeat({COLS}, {CARTE_L}mm); grid-template-rows: repeat({RANGS}, {CARTE_H}mm); }}
-.carte {{ width: {CARTE_L}mm; height: {CARTE_H}mm; outline: 0.1mm dashed #ccc; outline-offset: -0.05mm;
-  position: relative; overflow: hidden; padding: 4mm; }}
-.vide {{ outline: none; }}
+body {{ font-family: "Noto Sans", "Noto Sans CJK SC", "Noto Sans Arabic", "Noto Sans Hebrew", "DejaVu Sans", sans-serif; color: #111;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
+.carte {{ position: relative; width: {CARTE}mm; height: {CARTE}mm; overflow: hidden; break-after: page;
+  padding: {FOND_PERDU + SECURITE}mm; background: #fff; }}
+.carte:last-child {{ break-after: auto; }}
 .recto {{ display: flex; flex-direction: column; align-items: center; justify-content: space-between; background: #b3261e; color: #fff; }}
-.recto .marque {{ font-size: 3.2mm; letter-spacing: 0.4mm; text-transform: uppercase; font-weight: 700; }}
-.recto .qr {{ width: {QR_MM}mm; height: {QR_MM}mm; background: #fff; border-radius: 1.5mm; }}
-.recto .num {{ font-size: 2.6mm; }}
+.recto .marque {{ font-size: 4mm; letter-spacing: 0.5mm; text-transform: uppercase; font-weight: 700; }}
+.recto .qr {{ width: {QR_MM}mm; height: {QR_MM}mm; background: #fff; border-radius: 2mm; }}
+.recto .num {{ font-size: 3mm; }}
 .verso {{ display: flex; flex-direction: column; align-items: center; text-align: center; }}
-.verso .lieu {{ font-size: 2.6mm; text-transform: uppercase; letter-spacing: 0.2mm; color: #555; min-height: 3mm; }}
-.verso .annee {{ font-size: 15mm; font-weight: 800; line-height: 1; margin: 5mm 0 1mm; color: #b3261e; }}
-.verso .alerte {{ font-size: 2.2mm; color: #b3261e; border: 0.2mm solid #b3261e; padding: 0 1mm; }}
-.verso .titre {{ font-weight: 700; margin-top: 4mm; line-height: 1.15; overflow-wrap: anywhere; }}
+.verso .lieu {{ font-size: 3mm; text-transform: uppercase; letter-spacing: 0.2mm; color: #555; min-height: 3.5mm; }}
+.verso .annee {{ font-size: 17mm; font-weight: 800; line-height: 1; margin: 3mm 0 1mm; color: #b3261e; }}
+.verso .alerte {{ font-size: 2.4mm; color: #b3261e; border: 0.2mm solid #b3261e; padding: 0 1mm; }}
+.verso .titre {{ font-weight: 700; margin-top: 3mm; line-height: 1.15; overflow-wrap: anywhere; }}
 .verso .artistes {{ margin-top: 1.5mm; color: #333; line-height: 1.2; overflow-wrap: anywhere; }}
-.verso .contexte {{ font-size: 2.4mm; margin-top: 3mm; color: #333; line-height: 1.3; flex: 1; overflow: hidden; }}
-.verso .pied {{ width: 100%; display: flex; justify-content: space-between; font-size: 2.1mm; color: #777; gap: 2mm; text-align: left; }}
-.explicite {{ display: inline-block; font-size: 2mm; border: 0.2mm solid #111; padding: 0 0.6mm; margin-left: 1mm; vertical-align: middle; }}
+.verso .contexte {{ font-size: 2.6mm; margin-top: 2.5mm; color: #333; line-height: 1.3; flex: 1; overflow: hidden; }}
+.verso .pied {{ width: 100%; display: flex; justify-content: space-between; font-size: 2.3mm; color: #777; gap: 2mm; text-align: left; }}
+.explicite {{ display: inline-block; font-size: 2.2mm; border: 0.2mm solid #111; padding: 0 0.6mm; margin-left: 1mm; vertical-align: middle; }}
+.repere {{ outline: 0.1mm solid #0a0; outline-offset: -{FOND_PERDU}mm; }}
+.repere::after {{ content: ""; position: absolute; inset: {FOND_PERDU + SECURITE}mm; outline: 0.1mm dashed #08f; }}
 """
 
 
-def mise_en_page(cartes, svgs):
+def ordre_impression(cartes, miroir=True):
+    """Liste (carte, face, x_mm, y_mm, page) dans l'ordre des pages du PDF de cartes."""
     par_page = COLS * RANGS
-    pages = []
-    for debut in range(0, len(cartes), par_page):
+    places = []
+    for n, debut in enumerate(range(0, len(cartes), par_page)):
         lot = cartes[debut:debut + par_page]
-        lot_complet = lot + [None] * (par_page - len(lot))
-        rectos = [recto(c, svgs[c["id"]]) if c else '<div class="carte vide"></div>' for c in lot_complet]
-        # Verso : chaque rang est inversé pour une impression recto verso
-        # retournée sur le bord long.
-        versos = []
-        for r in range(RANGS):
-            rang = lot_complet[r * COLS:(r + 1) * COLS][::-1]
-            versos += [verso(c) if c else '<div class="carte vide"></div>' for c in rang]
-        for contenu in (rectos, versos):
-            pages.append(f'<section class="page">{reperes()}<div class="grille">{"".join(contenu)}</div></section>')
-    return (f'<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">'
-            f'<title>Chansons de lutte — cartes</title><style>{CSS}</style></head>'
-            f'<body>{"".join(pages)}</body></html>')
+        for k, c in enumerate(lot):
+            rang, col = divmod(k, COLS)
+            places.append((c, "recto", POS_X[col], POS_Y[rang], 2 * n))
+        for k, c in enumerate(lot):
+            rang, col = divmod(k, COLS)
+            # Recto verso retourné sur le bord long : la colonne est inversée au verso.
+            places.append((c, "verso", POS_X[COLS - 1 - col if miroir else col], POS_Y[rang], 2 * n + 1))
+    return places
+
+
+def html_cartes(places, svgs, reperes=False):
+    """Une carte de 94 x 94 mm par page ; l'imposition sur SRA3 est faite ensuite."""
+    morceaux = [recto(c, svgs[c["id"]]) if face == "recto" else verso(c) for c, face, *_ in places]
+    doc = (f'<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">'
+           f'<title>Chansons de lutte — cartes</title><style>{CSS}</style></head>'
+           f'<body>{"".join(morceaux)}</body></html>')
+    if reperes:
+        doc = doc.replace('class="carte ', 'class="carte repere ')
+    return doc
+
+
+def agrandir(doc, facteur):
+    return re.sub(r"(\d+(?:\.\d+)?)mm", lambda m: f"{float(m.group(1)) * facteur:g}mm", doc)
+
+
+def imposer(pdf_cartes, places, pdf_sortie):
+    """Place chaque carte sur des planches SRA3 aux coordonnées exactes du gabarit."""
+    from pypdf import PdfReader, PdfWriter, Transformation
+    pt = 72 / 25.4
+    lecteur = PdfReader(str(pdf_cartes))
+    if len(lecteur.pages) != len(places):
+        sys.exit(f"Le rendu a produit {len(lecteur.pages)} pages au lieu de {len(places)} : une carte déborde.")
+    ecrivain = PdfWriter()
+    nb_planches = max(p[4] for p in places) + 1
+    planches = [ecrivain.add_blank_page(PAGE_L * pt, PAGE_H * pt) for _ in range(nb_planches)]
+    cote = CARTE * pt
+    for page_carte, (_, _, x, y, n) in zip(lecteur.pages, places):
+        b = page_carte.mediabox
+        # Mise à l'échelle exacte : la page carte devient un carré de 94 mm.
+        t = (Transformation()
+             .translate(-float(b.left), -float(b.bottom))
+             .scale(cote / float(b.width), cote / float(b.height))
+             .translate(x * pt, PAGE_H * pt - y * pt - cote))
+        planches[n].merge_transformed_page(page_carte, t)
+    for pl in planches:
+        for boite in ("trimbox", "bleedbox", "cropbox"):
+            setattr(pl, boite, pl.mediabox)
+    with open(pdf_sortie, "wb") as f:
+        ecrivain.write(f)
+    return nb_planches
 
 
 def trouver_chrome(explicite):
@@ -242,6 +276,10 @@ def main():
     ap.add_argument("--base-url", help="encoder URL/jouer.html#id au lieu du lien Spotify")
     ap.add_argument("--sans-pdf", action="store_true")
     ap.add_argument("--chrome", help="chemin de Chrome ou Chromium pour le PDF")
+    ap.add_argument("--sans-miroir", action="store_true",
+                    help="versos aux mêmes colonnes que les rectos (retournement bord court ou imprimeur qui gère l'imposition)")
+    ap.add_argument("--reperes", action="store_true",
+                    help="épreuve de contrôle : trait de coupe (vert) et zone utile (bleu) dessinés, NE PAS envoyer à l'impression")
     args = ap.parse_args()
 
     cartes = lire_chansons()
@@ -250,7 +288,11 @@ def main():
 
     DOSSIER_SORTIE.mkdir(exist_ok=True)
     html_path = DOSSIER_SORTIE / "cartes.html"
-    html_path.write_text(mise_en_page(cartes, svgs), encoding="utf-8")
+    places = ordre_impression(cartes, miroir=not args.sans_miroir)
+    doc = html_cartes(places, svgs, reperes=args.reperes)
+    html_path.write_text(doc, encoding="utf-8")
+    rendu_path = DOSSIER_SORTIE / "cartes-rendu.html"
+    rendu_path.write_text(agrandir(doc, RENDU), encoding="utf-8")
     print(f"{len(cartes)} cartes, {len(svgs)} QR codes (niveau H), {html_path.relative_to(RACINE)}")
 
     sans_compo = sum(1 for c in cartes if c["annee_source"] != "composition")
@@ -261,10 +303,14 @@ def main():
         return
     chrome = trouver_chrome(args.chrome)
     if not chrome:
-        sys.exit("Chrome/Chromium introuvable : ouvrir sortie/cartes.html et imprimer en PDF (A4, marges : aucune, échelle 100 %), ou passer --chrome.")
-    pdf = DOSSIER_SORTIE / "cartes.pdf"
-    faire_pdf(html_path, pdf, chrome)
-    print(f"PDF : {pdf.relative_to(RACINE)}")
+        sys.exit("Chrome/Chromium introuvable : passer --chrome CHEMIN.")
+    pdf = DOSSIER_SORTIE / ("cartes-epreuve.pdf" if args.reperes else "cartes.pdf")
+    brut = DOSSIER_SORTIE / "cartes-unitaires.pdf"
+    faire_pdf(rendu_path, brut, chrome)
+    rendu_path.unlink()
+    n = imposer(brut, places, pdf)
+    brut.unlink(missing_ok=True)
+    print(f"PDF : {pdf.relative_to(RACINE)} ({n} pages SRA3 {PAGE_L} x {PAGE_H} mm = {n // 2} planches recto verso)")
 
 
 if __name__ == "__main__":

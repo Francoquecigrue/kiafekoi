@@ -38,11 +38,29 @@ pip install -r outils/requirements.txt
 python3 outils/cartes.py
 ```
 
-Le PDF est rendu par Chrome, Chromium ou Edge en mode sans interface. Si le script ne le trouve pas : `--chrome /chemin/vers/chrome`, ou ouvrir `sortie/cartes.html` et imprimer en PDF (A4, marges : aucune, échelle 100 %).
+Le script a besoin de Chrome, Chromium ou Edge (rendu sans interface). S'il ne le trouve pas : `--chrome /chemin/vers/chrome`.
 
-Mise en page : A4, 9 cartes de 63 × 88 mm par page, traits de coupe dans les marges. Pages impaires = rectos (QR codes), pages paires = versos, rangées inversées pour une impression **recto verso, retournement sur le bord long**. Faire un essai sur une feuille avant tout tirage : l'alignement recto verso varie selon les imprimantes.
+### Gabarit d'impression (SRA3)
 
-QR codes : correction d'erreur niveau H, 46 mm de côté, version 6. Les 100 QR codes ont été vérifiés par décodage du PDF et des PNG.
+Repris du modèle de production fourni :
+
+- planche SRA3 320 × 450 mm, 3 colonnes × 4 rangées = 12 cartes différentes par planche (un seul exemplaire de chaque) ;
+- carte de 94 × 94 mm fond perdu compris (2 mm), soit **90 × 90 mm après découpe** ;
+- zone utile 86 × 86 mm (2 mm de marge de sécurité à l'intérieur du trait de coupe) ;
+- coin haut gauche de chaque carte (fond perdu compris) : x = 13, 113, 213 mm ; y = 23, 128, 233, 338 mm ;
+- pages impaires = rectos (QR codes), pages paires = versos ; pas de traits de coupe dessinés, comme dans le modèle.
+
+100 cartes = 9 planches recto verso (18 pages), la dernière avec 4 cartes.
+
+Les versos sont **inversés par colonne** (colonne 1 du recto ↔ colonne 3 du verso), ce qui correspond à un recto verso retourné sur le bord long. Le modèle fourni ne permet pas de le vérifier (chaque rangée y contient 3 cartes identiques). Si l'imprimeur retourne sur le bord court ou gère lui-même l'imposition : `--sans-miroir`.
+
+Précision : Chrome arrondit sa mise en page au pixel. Les cartes sont donc rendues à l'échelle 4 puis réduites et placées par pypdf aux coordonnées exactes. Les positions sont exactes au centième de millimètre, le fond perdu mesure 1,97 mm au lieu de 2.
+
+Épreuve de contrôle : `python3 outils/cartes.py --reperes` produit `sortie/cartes-epreuve.pdf`, avec le trait de coupe en vert et la zone utile en pointillés bleus. Ce fichier ne doit pas être envoyé à l'impression.
+
+Couleurs : le PDF est en RVB. Si l'imprimeur exige du CMJN ou du PDF/X, la conversion se fait chez lui ou dans un outil de PAO.
+
+QR codes : correction d'erreur niveau H, 54 mm de côté. Les 100 QR codes ont été vérifiés par décodage du PDF et des PNG.
 
 ### Que contient le QR code ?
 
