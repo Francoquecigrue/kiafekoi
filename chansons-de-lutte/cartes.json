@@ -1,0 +1,1671 @@
+[
+ {
+  "num": 1,
+  "id": "7fSZa5OqnRnhJBdeRZlbjh",
+  "titre": "El pueblo unido jamás será vencido",
+  "artistes": "Quilapayún",
+  "annee": "1990",
+  "annee_source": "album",
+  "annee_album": "1990",
+  "pays": "Chili",
+  "langue": "espagnol",
+  "causes": [
+   "révolution",
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 2,
+  "id": "7DGPR4XzmRCUT62QQB7T21",
+  "titre": "La retraite",
+  "artistes": "Les Vulves Assassines",
+  "annee": "2022",
+  "annee_source": "album",
+  "annee_album": "2022",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 3,
+  "id": "4qrmFIRYVgp3GdW4FmkyIp",
+  "titre": "L'estaca",
+  "artistes": "Lluis Llach",
+  "annee": "2007",
+  "annee_source": "album",
+  "annee_album": "2007",
+  "pays": "Espagne (Catalogne)",
+  "langue": "catalan",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 4,
+  "id": "2XdbtpBw3XiGGkyJGX89WG",
+  "titre": "La semaine sanglante",
+  "artistes": "Francesca Solleville",
+  "annee": "2016",
+  "annee_source": "album",
+  "annee_album": "2016",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 5,
+  "id": "6R8R2nEtGQiAeAOTZTRwgS",
+  "titre": "Table ronde",
+  "artistes": "Grand Kalle Et l'African Jazz",
+  "annee": "2013",
+  "annee_source": "album",
+  "annee_album": "2013",
+  "pays": "Congo (RDC)",
+  "langue": "",
+  "causes": [
+   "anticolonialisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 6,
+  "id": "78y0EW6Pr5xe0w1cdX7feC",
+  "titre": "Ah! Ca ira",
+  "artistes": "Jacques Gautier",
+  "annee": "2012",
+  "annee_source": "album",
+  "annee_album": "2012",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 7,
+  "id": "3wktSUAg5CUnGGqgfU40TY",
+  "titre": "Les canuts",
+  "artistes": "Yves Montand",
+  "annee": "2016",
+  "annee_source": "album",
+  "annee_album": "2016",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 8,
+  "id": "5XlA1ST1Uug5QDWsb9jHlK",
+  "titre": "La makhnovstchina",
+  "artistes": "Jacques Marchais, Vanessa Hachloum, Michel Devy",
+  "annee": "2014",
+  "annee_source": "album",
+  "annee_album": "2014",
+  "pays": "Ukraine",
+  "langue": "français",
+  "causes": [
+   "anarchisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 9,
+  "id": "72I4PYnCQqdPnx1YgpBmUS",
+  "titre": "Bella Ciao",
+  "artistes": "Giovanna Daffini",
+  "annee": "1996",
+  "annee_source": "album",
+  "annee_album": "1996",
+  "pays": "Italie",
+  "langue": "italien",
+  "causes": [
+   "mouvement ouvrier",
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 10,
+  "id": "49CsG63iEYAQhViMyLfQqC",
+  "titre": "Le chant des partisans",
+  "artistes": "Germaine Sablon",
+  "annee": "2005",
+  "annee_source": "album",
+  "annee_album": "2005",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 11,
+  "id": "3uBdKN2jLwvUuXCIiBhqOd",
+  "titre": "La Lega",
+  "artistes": "Canzoniere delle Lame",
+  "annee": "1972",
+  "annee_source": "album",
+  "annee_album": "1972",
+  "pays": "Italie",
+  "langue": "italien",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 12,
+  "id": "7FBAbC3MV9vTiz4070Sh10",
+  "titre": "Les journées de Mai",
+  "artistes": "Jacques Marchais, Vanessa Hachloum",
+  "annee": "2014",
+  "annee_source": "album",
+  "annee_album": "2014",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 13,
+  "id": "4gzgfMQwr2bTClOSoMTnr4",
+  "titre": "No Pasaran",
+  "artistes": "Rolando Alarcon",
+  "annee": "1967",
+  "annee_source": "album",
+  "annee_album": "1967",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 14,
+  "id": "1g6deCPEMyapxnFkqBU6lR",
+  "titre": "La Libertat (Cançon de nèrvi)",
+  "artistes": "Corala Occitania Lodova",
+  "annee": "2021",
+  "annee_source": "album",
+  "annee_album": "2021",
+  "pays": "France (Occitanie)",
+  "langue": "occitan",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 15,
+  "id": "2pe2ycdPpE5MWgRp6oiFAl",
+  "titre": "Arbetlozer marsh",
+  "artistes": "Bente Kahan",
+  "annee": "1992",
+  "annee_source": "album",
+  "annee_album": "1992",
+  "pays": "Pologne",
+  "langue": "yiddish",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 16,
+  "id": "0OwzvKPNtHGzClvHHhWdTd",
+  "titre": "Dire-gelt",
+  "artistes": "Bente Kahan",
+  "annee": "1997",
+  "annee_source": "album",
+  "annee_album": "1997",
+  "pays": "",
+  "langue": "yiddish",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 17,
+  "id": "254yDyF55hkUIkP6HZiMb9",
+  "titre": "Prohibido Olvidar",
+  "artistes": "Rubén Blades",
+  "annee": "1991",
+  "annee_source": "album",
+  "annee_album": "1991",
+  "pays": "Amérique latine",
+  "langue": "espagnol",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 18,
+  "id": "18h1qlsxljVsQSUsuw11k1",
+  "titre": "Leve Palestina",
+  "artistes": "KOFIA",
+  "annee": "2023",
+  "annee_source": "album",
+  "annee_album": "2023",
+  "pays": "Palestine",
+  "langue": "suédois",
+  "causes": [
+   "libération nationale"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 19,
+  "id": "7mMC7vXmOB5jkZUUvRigRm",
+  "titre": "La Libertat",
+  "artistes": "Le Chœur du Lamparo",
+  "annee": "2021",
+  "annee_source": "album",
+  "annee_album": "2021",
+  "pays": "France (Occitanie)",
+  "langue": "occitan",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 20,
+  "id": "1x8tqApPPOng2peO9ulYuT",
+  "titre": "El Paso del Ebro",
+  "artistes": "Rosa Zaragoza",
+  "annee": "2000",
+  "annee_source": "album",
+  "annee_album": "2000",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 21,
+  "id": "2VSK5qzKisNvwnJszk3Ofx",
+  "titre": "Das Einheitsfrontlied",
+  "artistes": "Hanns Eisler, Ernst Busch, Grigori Schneerson",
+  "annee": "2010",
+  "annee_source": "album",
+  "annee_album": "2010",
+  "pays": "Allemagne",
+  "langue": "allemand",
+  "causes": [
+   "mouvement ouvrier",
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 22,
+  "id": "0A6nzrnr0lUreHRTx3fRru",
+  "titre": "Hasta Siempre",
+  "artistes": "Carlos Puebla Y Los Tradicionales",
+  "annee": "1994",
+  "annee_source": "album",
+  "annee_album": "1994",
+  "pays": "Cuba",
+  "langue": "espagnol",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 23,
+  "id": "2erv2e2OOASfQCLHRDGQvP",
+  "titre": "La marseillaise de la commune",
+  "artistes": "Pauline Floury, Séverin Valière",
+  "annee": "2020",
+  "annee_source": "album",
+  "annee_album": "2020",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 24,
+  "id": "2lHLYMhOxBJpaKwNzyDOe1",
+  "titre": "Bella ciao",
+  "artistes": "Crivelli",
+  "annee": "1970",
+  "annee_source": "album",
+  "annee_album": "1970",
+  "pays": "Italie",
+  "langue": "italien",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 25,
+  "id": "3mrD89s4Ua9IS3Aw5kxMU7",
+  "titre": "Miss Maggie",
+  "artistes": "Renaud",
+  "annee": "2010",
+  "annee_source": "album",
+  "annee_album": "2010",
+  "pays": "France",
+  "langue": "français",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 26,
+  "id": "3QIwQYHBVWXSBFJIuCbSCj",
+  "titre": "Porcherie",
+  "artistes": "Bérurier Noir",
+  "annee": "1985",
+  "annee_source": "album",
+  "annee_album": "1985",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 27,
+  "id": "49cfQW8wnSTOeNuPZsmqXf",
+  "titre": "Independance Cha-Cha",
+  "artistes": "Grand Kalle Et l'African Jazz",
+  "annee": "2013",
+  "annee_source": "album",
+  "annee_album": "2013",
+  "pays": "Congo (RDC)",
+  "langue": "lingala, français",
+  "causes": [
+   "anticolonialisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 28,
+  "id": "4WLTwrvhyLxX8Y9Pvoj20s",
+  "titre": "Die Moorsoldaten",
+  "artistes": "Erich-Weinert-Ensemble",
+  "annee": "2017",
+  "annee_source": "album",
+  "annee_album": "2017",
+  "pays": "Allemagne",
+  "langue": "allemand",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 29,
+  "id": "3HjvhL3o0RQoI6oyFhda3j",
+  "titre": "Debout les femmes",
+  "artistes": "39 Femmes",
+  "annee": "2018",
+  "annee_source": "album",
+  "annee_album": "2018",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "féminisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 30,
+  "id": "0TZsy6XheL9cSxuX7yYqCO",
+  "titre": "Which Side are You On?",
+  "artistes": "Pete Seeger",
+  "annee": "1998",
+  "annee_source": "album",
+  "annee_album": "1998",
+  "pays": "États-Unis",
+  "langue": "anglais",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 31,
+  "id": "649Zk1kqe5TpkMYSCr0sI6",
+  "titre": "Tear The Fascists Down",
+  "artistes": "Woody Guthrie",
+  "annee": "2009",
+  "annee_source": "album",
+  "annee_album": "2009",
+  "pays": "États-Unis",
+  "langue": "anglais",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 32,
+  "id": "1CTex49P0iWwzUGsMNjgaV",
+  "titre": "Strange Fruit",
+  "artistes": "Billie Holiday",
+  "annee": "1957",
+  "annee_source": "album",
+  "annee_album": "1957",
+  "pays": "États-Unis",
+  "langue": "anglais",
+  "causes": [
+   "antiracisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 33,
+  "id": "5R2hZPXRuw06PUltadE4Ub",
+  "titre": "Le déserteur",
+  "artistes": "Boris Vian",
+  "annee": "1997",
+  "annee_source": "album",
+  "annee_album": "1997",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "antimilitarisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 34,
+  "id": "3vznV0MslxjK9gA0yUgqrm",
+  "titre": "De Cuba traigo un cantar",
+  "artistes": "Carlos Puebla Y Sus Tradicionales",
+  "annee": "1965",
+  "annee_source": "album",
+  "annee_album": "1965",
+  "pays": "Cuba",
+  "langue": "espagnol",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 35,
+  "id": "5EJjXLsPeogH6qMBxHr0x7",
+  "titre": "Les Canuts",
+  "artistes": "Aristide Bruant",
+  "annee": "1981",
+  "annee_source": "album",
+  "annee_album": "1981",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 36,
+  "id": "7hxxWP5ubdnIzsIEScPvr2",
+  "titre": "A la Huelga",
+  "artistes": "Rolando Alarcon",
+  "annee": "1967",
+  "annee_source": "album",
+  "annee_album": "1967",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "mouvement ouvrier",
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 37,
+  "id": "6SsKFQZmAsCVkAdfxmYR2T",
+  "titre": "El Quinto Regimiento",
+  "artistes": "Pi de la Serra, Carme Canela",
+  "annee": "1997",
+  "annee_source": "album",
+  "annee_album": "1997",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 38,
+  "id": "7MqEJ4W7SnlIXFx6JhFfFX",
+  "titre": "Ay Carmela",
+  "artistes": "Coro Popular Jabalón",
+  "annee": "1977",
+  "annee_source": "album",
+  "annee_album": "1977",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 39,
+  "id": "04f9gX1GwN02SpvYeSks9j",
+  "titre": "Arroja la Bomba",
+  "artistes": "Frente Popular",
+  "annee": "1936",
+  "annee_source": "album",
+  "annee_album": "1936",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "anarchisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 40,
+  "id": "5w3AsUEGoaCuBhDp14umuy",
+  "titre": "Canción Sin Miedo",
+  "artistes": "Vivir Quintana, Mon Laferte",
+  "annee": "2020",
+  "annee_source": "album",
+  "annee_album": "2020",
+  "pays": "Mexique",
+  "langue": "espagnol",
+  "causes": [
+   "féminisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 41,
+  "id": "1zBpuHWodpDufPON9nnxLY",
+  "titre": "Bread and Roses",
+  "artistes": "Judy Collins",
+  "annee": "1976",
+  "annee_source": "album",
+  "annee_album": "1976",
+  "pays": "États-Unis",
+  "langue": "anglais",
+  "causes": [
+   "mouvement ouvrier",
+   "féminisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 42,
+  "id": "7MK5PBuGOKdlCPVHONHtcQ",
+  "titre": "Soritis Petroulas",
+  "artistes": "Mikis Theodorakis",
+  "annee": "1971",
+  "annee_source": "album",
+  "annee_album": "1971",
+  "pays": "Grèce",
+  "langue": "grec",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 43,
+  "id": "3L1bnhUradYVpa6jSzwbOd",
+  "titre": "L'appel du komintern",
+  "artistes": "Revolutionary Protest Choir",
+  "annee": "2012",
+  "annee_source": "album",
+  "annee_album": "2012",
+  "pays": "International",
+  "langue": "français",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 44,
+  "id": "5kn0LKQhQVtyMzQN6vh6MZ",
+  "titre": "Santa Bárbara Bendita",
+  "artistes": "Coral San Martin De Sotronio",
+  "annee": "2016",
+  "annee_source": "album",
+  "annee_album": "2016",
+  "pays": "Espagne (Asturies)",
+  "langue": "espagnol",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 45,
+  "id": "38a5MkKOALxgDWJHxqlWnj",
+  "titre": "Asma Asmaton",
+  "artistes": "Maria Farantouri",
+  "annee": "2004",
+  "annee_source": "album",
+  "annee_album": "2004",
+  "pays": "Grèce",
+  "langue": "grec",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 46,
+  "id": "1bIupoWqwPhmPbXekHD5QR",
+  "titre": "Les corons",
+  "artistes": "Pierre Bachelet",
+  "annee": "1982",
+  "annee_source": "album",
+  "annee_album": "1982",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 47,
+  "id": "4eGkvQWYpLwxL9H7Va13x7",
+  "titre": "L'affiche rouge",
+  "artistes": "Feu! Chatterton",
+  "annee": "2024",
+  "annee_source": "album",
+  "annee_album": "2024",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 48,
+  "id": "6qa36OkEeQqGaWlOcpjlGD",
+  "titre": "Sunday Bloody Sunday",
+  "artistes": "U2",
+  "annee": "2006",
+  "annee_source": "album",
+  "annee_album": "2006",
+  "pays": "Irlande du Nord",
+  "langue": "anglais",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 49,
+  "id": "0dOg1ySSI7NkpAe89Zo0b9",
+  "titre": "Born in the U.S.A.",
+  "artistes": "Bruce Springsteen",
+  "annee": "1984",
+  "annee_source": "album",
+  "annee_album": "1984",
+  "pays": "États-Unis",
+  "langue": "anglais",
+  "causes": [
+   "antimilitarisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 50,
+  "id": "7EZC6E7UjZe63f1jRmkWxt",
+  "titre": "Zombie",
+  "artistes": "The Cranberries",
+  "annee": "1994",
+  "annee_source": "album",
+  "annee_album": "1994",
+  "pays": "Irlande du Nord",
+  "langue": "anglais",
+  "causes": [
+   "antimilitarisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 51,
+  "id": "4L0SHfsanAO7M3WeOYZlka",
+  "titre": "Bandiera Rossa",
+  "artistes": "Motivés",
+  "annee": "2017",
+  "annee_source": "album",
+  "annee_album": "2017",
+  "pays": "Italie",
+  "langue": "italien",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 52,
+  "id": "61Tfx6zfjRe7XqJSFrXBR3",
+  "titre": "The Foggy Dew (with Sinéad O'Connor)",
+  "artistes": "The Chieftains, Sinéad O'Connor",
+  "annee": "2006",
+  "annee_source": "album",
+  "annee_album": "2006",
+  "pays": "Irlande",
+  "langue": "anglais",
+  "causes": [
+   "libération nationale"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 53,
+  "id": "1uJw3GDkiUsRXMk2TiYO32",
+  "titre": "Venceremos",
+  "artistes": "Quilapayún",
+  "annee": "1990",
+  "annee_source": "album",
+  "annee_album": "1990",
+  "pays": "Chili",
+  "langue": "espagnol",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 54,
+  "id": "1qJ2FWK2nJMKKE0abGuo2A",
+  "titre": "Arizona (shoot)",
+  "artistes": "Tmoin, Achille",
+  "annee": "2025",
+  "annee_source": "album",
+  "annee_album": "2025",
+  "pays": "",
+  "langue": "",
+  "causes": [],
+  "contexte": "",
+  "explicite": true,
+  "qr_version": 6
+ },
+ {
+  "num": 55,
+  "id": "2dOMGYKzJpnlFJRSa8dvwL",
+  "titre": "Grândola, Vila Morena",
+  "artistes": "José Afonso",
+  "annee": "1971",
+  "annee_source": "album",
+  "annee_album": "1971",
+  "pays": "Portugal",
+  "langue": "portugais",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 56,
+  "id": "25u53mEJMoUkHcBWYavOVT",
+  "titre": "Asimbonanga (Mandela)",
+  "artistes": "Johnny Clegg, Savuka",
+  "annee": "1987",
+  "annee_source": "album",
+  "annee_album": "1987",
+  "pays": "Afrique du Sud",
+  "langue": "anglais, zoulou",
+  "causes": [
+   "antiracisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 57,
+  "id": "09laSLQxhzSksqWaYmY53j",
+  "titre": "The Wearing of the Green",
+  "artistes": "The Wolfe Tones",
+  "annee": "2008",
+  "annee_source": "album",
+  "annee_album": "2008",
+  "pays": "Irlande",
+  "langue": "anglais",
+  "causes": [
+   "libération nationale"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 58,
+  "id": "2UevfJmTi7FodUAWprhuvU",
+  "titre": "Tanbou Lou",
+  "artistes": "The Souljazz Orchestra",
+  "annee": "2012",
+  "annee_source": "album",
+  "annee_album": "2012",
+  "pays": "",
+  "langue": "",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 59,
+  "id": "3mH0Lmh3xjk16INiPISHq7",
+  "titre": "A Luta Continua",
+  "artistes": "Miriam Makeba",
+  "annee": "2012",
+  "annee_source": "album",
+  "annee_album": "2012",
+  "pays": "Mozambique",
+  "langue": "",
+  "causes": [
+   "anticolonialisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 60,
+  "id": "3RZoPvPHZsPTTc94DfWSCL",
+  "titre": "Zombie",
+  "artistes": "Fela Kuti",
+  "annee": "1976",
+  "annee_source": "album",
+  "annee_album": "1976",
+  "pays": "Nigeria",
+  "langue": "anglais (pidgin)",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 61,
+  "id": "7bqXRQ1XT2uAECGKcyvRza",
+  "titre": "Liberez-L_Algerie",
+  "artistes": "Ghiles Zikioue",
+  "annee": "2015",
+  "annee_source": "album",
+  "annee_album": "2015",
+  "pays": "Algérie",
+  "langue": "",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 62,
+  "id": "0UO6j3Nyor7zuJdB3ldNxQ",
+  "titre": "A Piece of Ground",
+  "artistes": "Miriam Makeba",
+  "annee": "2017",
+  "annee_source": "album",
+  "annee_album": "2017",
+  "pays": "Afrique du Sud",
+  "langue": "anglais",
+  "causes": [
+   "anticolonialisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 63,
+  "id": "09UDbTUZPXK8mYZZpKhFJ9",
+  "titre": "سرود آزادی",
+  "artistes": "Ethnic Musicians",
+  "annee": "2022",
+  "annee_source": "album",
+  "annee_album": "2022",
+  "pays": "",
+  "langue": "persan",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 64,
+  "id": "7xzMrUmlooPa1Fmp88hlYc",
+  "titre": "Sodade",
+  "artistes": "Cesária Evora",
+  "annee": "1992",
+  "annee_source": "album",
+  "annee_album": "1992",
+  "pays": "Cap-Vert",
+  "langue": "créole capverdien",
+  "causes": [
+   "exil"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 65,
+  "id": "4BY0xCh2pnrudpZDB7SboM",
+  "titre": "11'30 contre les lois racistes",
+  "artistes": "Akhenaton, Freeman, Mystik, Assassin, AZE, Djoloff, Fabe, Kabal, Ménélik, Passi, Stomy Bugsy, Rootsneg, Sléo, Soldafadas, Yazid, Arco, Jean-François Richet, White & Spirit, Radikalkicker",
+  "annee": "1997",
+  "annee_source": "album",
+  "annee_album": "1997",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "antiracisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 66,
+  "id": "5uuvRfL6yhUu6EwAyujRGY",
+  "titre": "Nicaraguita",
+  "artistes": "Motivés",
+  "annee": "1997",
+  "annee_source": "album",
+  "annee_album": "1997",
+  "pays": "Nicaragua",
+  "langue": "espagnol",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 67,
+  "id": "4auo7q2xmMj5q0t56q8ImW",
+  "titre": "En la plaza de mi pueblo",
+  "artistes": "Coro Popular Jabalón",
+  "annee": "1977",
+  "annee_source": "album",
+  "annee_album": "1977",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 68,
+  "id": "3Z2tPWiNiIpg8UMMoowHIk",
+  "titre": "We Are The World",
+  "artistes": "U.S.A. For Africa",
+  "annee": "1985",
+  "annee_source": "album",
+  "annee_album": "1985",
+  "pays": "Éthiopie",
+  "langue": "anglais",
+  "causes": [
+   "solidarité"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 69,
+  "id": "1Ou4ok09iAKdlog6tX27d0",
+  "titre": "La Varsovienne",
+  "artistes": "Bandiera Rossa",
+  "annee": "1974",
+  "annee_source": "album",
+  "annee_album": "1974",
+  "pays": "Pologne",
+  "langue": "",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 70,
+  "id": "05VQCQ0wA5hJBlYao2FoAa",
+  "titre": "La Libertat",
+  "artistes": "Lo Cor de la Plana",
+  "annee": "2012",
+  "annee_source": "album",
+  "annee_album": "2012",
+  "pays": "France (Occitanie)",
+  "langue": "occitan",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 71,
+  "id": "4Dgus4Z1Dtbkv3BOnuwFf5",
+  "titre": "This Is Not a Song, It's an Outburst: Or, the Establishment Blues",
+  "artistes": "Rodríguez",
+  "annee": "1970",
+  "annee_source": "album",
+  "annee_album": "1970",
+  "pays": "États-Unis",
+  "langue": "anglais",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 72,
+  "id": "2WfXI9I4MgPmJXQpH6G3X0",
+  "titre": "Adékalom",
+  "artistes": "Danyèl Waro",
+  "annee": "2011",
+  "annee_source": "album",
+  "annee_album": "2011",
+  "pays": "France (La Réunion)",
+  "langue": "créole réunionnais",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 73,
+  "id": "52CeRs25zJwj0kDUxGibym",
+  "titre": "A Desalambrar",
+  "artistes": "Victor Jara",
+  "annee": "1969",
+  "annee_source": "album",
+  "annee_album": "1969",
+  "pays": "Uruguay",
+  "langue": "espagnol",
+  "causes": [
+   "monde paysan"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 74,
+  "id": "20EBvmb6LRpOqjcoTdkeME",
+  "titre": "A Las Barricadas",
+  "artistes": "Banda Republicana",
+  "annee": "2021",
+  "annee_source": "album",
+  "annee_album": "2021",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "anarchisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 75,
+  "id": "6IJIKoKYv71iF16hUiCg8i",
+  "titre": "Cinturini",
+  "artistes": "Lucilla Galeazzi",
+  "annee": "2001",
+  "annee_source": "album",
+  "annee_album": "2001",
+  "pays": "Italie",
+  "langue": "italien",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 76,
+  "id": "5IhvrGqi5fRkBKprD3mijC",
+  "titre": "El Payandé",
+  "artistes": "Lucha Reyes",
+  "annee": "1997",
+  "annee_source": "album",
+  "annee_album": "1997",
+  "pays": "Pérou",
+  "langue": "espagnol",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 77,
+  "id": "4LTNAjsm2FA8BkvmELvDvt",
+  "titre": "Kan Ar Kann",
+  "artistes": "Tri Yann",
+  "annee": "2007",
+  "annee_source": "album",
+  "annee_album": "2007",
+  "pays": "France (Bretagne)",
+  "langue": "",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 78,
+  "id": "52V0laIHD3rvFZrwqDPHFe",
+  "titre": "Shosholoza",
+  "artistes": "\"Ipi Ntombi\" 1975 Original Cast",
+  "annee": "1975",
+  "annee_source": "album",
+  "annee_album": "1975",
+  "pays": "Afrique du Sud",
+  "langue": "",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 79,
+  "id": "0HhkteYzGJyCB6FZC80abL",
+  "titre": "Sin pan",
+  "artistes": "Coro Popular Jabalón",
+  "annee": "2016",
+  "annee_source": "album",
+  "annee_album": "2016",
+  "pays": "Espagne",
+  "langue": "espagnol",
+  "causes": [
+   "antifascisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 80,
+  "id": "4kuVdlsLbfQyfn71k9umvI",
+  "titre": "Casca l'uliva",
+  "artistes": "Serena Rispoli, Debora Di Gilio",
+  "annee": "2025",
+  "annee_source": "album",
+  "annee_album": "2025",
+  "pays": "Italie",
+  "langue": "",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 81,
+  "id": "4dHzBEg7c46vcm5R6ZxJla",
+  "titre": "Die Gedanken Sind Frei",
+  "artistes": "Pete Seeger",
+  "annee": "1966",
+  "annee_source": "album",
+  "annee_album": "1966",
+  "pays": "Allemagne",
+  "langue": "allemand",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 82,
+  "id": "3PfqCDBnk0uqgMnX0FubQB",
+  "titre": "Dissan Na M'bera",
+  "artistes": "Super Mama Djombo",
+  "annee": "2012",
+  "annee_source": "album",
+  "annee_album": "2012",
+  "pays": "Guinée-Bissau",
+  "langue": "",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 83,
+  "id": "5L9MdJjYonYyktDQk2Ei6b",
+  "titre": "Mona Ki Ngi Xica",
+  "artistes": "Bonga",
+  "annee": "2013",
+  "annee_source": "album",
+  "annee_album": "2013",
+  "pays": "Angola",
+  "langue": "kimbundu",
+  "causes": [
+   "anticolonialisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 84,
+  "id": "4dlOK5lQLMTS66QEGZKsRc",
+  "titre": "TERITORYO",
+  "artistes": "Morobeats, The Flackos, JMara, Dj Medmessiah, Naus ng morobeats, Prophecee, H20 Klann ng morobeats",
+  "annee": "2024",
+  "annee_source": "album",
+  "annee_album": "2024",
+  "pays": "Philippines",
+  "langue": "",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 85,
+  "id": "2ZA0kk67dKL8E5UjEbA2rD",
+  "titre": "Apesar de Você",
+  "artistes": "Chico Buarque",
+  "annee": "2014",
+  "annee_source": "album",
+  "annee_album": "2014",
+  "pays": "Brésil",
+  "langue": "portugais",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 86,
+  "id": "6mrwHoafWEfB7iJYnNIGMn",
+  "titre": "Электричка",
+  "artistes": "Kino",
+  "annee": "1989",
+  "annee_source": "album",
+  "annee_album": "1989",
+  "pays": "URSS",
+  "langue": "russe",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 87,
+  "id": "0huTXMuytB0jdah8wapKE7",
+  "titre": "Treaty",
+  "artistes": "Yothu Yindi",
+  "annee": "1991",
+  "annee_source": "album",
+  "annee_album": "1991",
+  "pays": "Australie",
+  "langue": "anglais, yolŋu matha",
+  "causes": [
+   "peuples autochtones"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 88,
+  "id": "7Hgn9jJrVR340hgROuUp68",
+  "titre": "Guevara Mate",
+  "artistes": "Nūn",
+  "annee": "2026",
+  "annee_source": "album",
+  "annee_album": "2026",
+  "pays": "",
+  "langue": "",
+  "causes": [],
+  "contexte": "",
+  "explicite": true,
+  "qr_version": 6
+ },
+ {
+  "num": 89,
+  "id": "4aDCdCD9rfUoQ6FlWCF6nd",
+  "titre": "임을 위한 행진곡",
+  "artistes": "노래를 찾는 사람들",
+  "annee": "1991",
+  "annee_source": "album",
+  "annee_album": "1991",
+  "pays": "Corée du Sud",
+  "langue": "coréen",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 90,
+  "id": "2xYUmiqMOw2deOABJ1f67h",
+  "titre": "Slavery Days",
+  "artistes": "Burning Spear",
+  "annee": "1975",
+  "annee_source": "album",
+  "annee_album": "1975",
+  "pays": "Jamaïque",
+  "langue": "anglais",
+  "causes": [
+   "antiracisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 91,
+  "id": "33CTv3UT9kRPUrYBVJGCyk",
+  "titre": "Ey Reqîb",
+  "artistes": "Sivan Perwer",
+  "annee": "2012",
+  "annee_source": "album",
+  "annee_album": "2012",
+  "pays": "Kurdistan",
+  "langue": "kurde",
+  "causes": [
+   "libération nationale"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 92,
+  "id": "5QOLYYcJHuMBUNHjpshCxV",
+  "titre": "Bandera",
+  "artistes": "Canta U Populu Corsu",
+  "annee": "2015",
+  "annee_source": "album",
+  "annee_album": "2015",
+  "pays": "France (Corse)",
+  "langue": "corse",
+  "causes": [
+   "langues et peuples minorisés"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 93,
+  "id": "4tCmDV359N1JIJ10BP3T9d",
+  "titre": "Nkosi Sikelel'i Afrika",
+  "artistes": "Dumisani Ma-Afrika!",
+  "annee": "1993",
+  "annee_source": "album",
+  "annee_album": "1993",
+  "pays": "Afrique du Sud",
+  "langue": "xhosa",
+  "causes": [
+   "antiracisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 94,
+  "id": "3goeo2zlQPRsJpgB48FHtq",
+  "titre": "Di shvu'e",
+  "artistes": "Theodore Bikel",
+  "annee": "1961",
+  "annee_source": "album",
+  "annee_album": "1961",
+  "pays": "Empire russe",
+  "langue": "yiddish",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 95,
+  "id": "19IMseaUnXysasvdWzg14e",
+  "titre": "Joe Hill",
+  "artistes": "Paul Robeson",
+  "annee": "1991",
+  "annee_source": "album",
+  "annee_album": "1991",
+  "pays": "États-Unis",
+  "langue": "anglais",
+  "causes": [
+   "mouvement ouvrier"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 96,
+  "id": "63Wmpa2EeZ4hGGBLBl3zo6",
+  "titre": "La carmagnole",
+  "artistes": "Toscani",
+  "annee": "2004",
+  "annee_source": "album",
+  "annee_album": "2004",
+  "pays": "France",
+  "langue": "français",
+  "causes": [
+   "révolution"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 97,
+  "id": "1q1l887xA1xEmReGHFvp7d",
+  "titre": "Bayan Ko",
+  "artistes": "Ruben Tagalog, Sylvia La Torre, Mabuhay Singers",
+  "annee": "2008",
+  "annee_source": "album",
+  "annee_album": "2008",
+  "pays": "Philippines",
+  "langue": "tagalog",
+  "causes": [
+   "dictature et répression",
+   "anticolonialisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 98,
+  "id": "7qZg6ZNvhds5bcWgjWoWsT",
+  "titre": "Baraye",
+  "artistes": "Shervin Hajipour",
+  "annee": "2022",
+  "annee_source": "album",
+  "annee_album": "2022",
+  "pays": "Iran",
+  "langue": "persan",
+  "causes": [
+   "dictature et répression",
+   "féminisme"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 99,
+  "id": "0ApurVd4mTOSaiYksHC71q",
+  "titre": "Podustunna Poddunadugu",
+  "artistes": "Jadala Ramesh",
+  "annee": "2023",
+  "annee_source": "album",
+  "annee_album": "2023",
+  "pays": "Inde",
+  "langue": "télougou",
+  "causes": [],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ },
+ {
+  "num": 100,
+  "id": "6dN5MTGByJz4DRQ8SCiWh6",
+  "titre": "一无所有",
+  "artistes": "崔健",
+  "annee": "1989",
+  "annee_source": "album",
+  "annee_album": "1989",
+  "pays": "Chine",
+  "langue": "mandarin",
+  "causes": [
+   "dictature et répression"
+  ],
+  "contexte": "",
+  "explicite": false,
+  "qr_version": 6
+ }
+]

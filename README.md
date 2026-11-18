@@ -12,3 +12,5 @@ Jeu web mobile, sans dépendance. Ouvrir `index.html` ou publier via GitHub Page
 Identifiants : lepen, melenchon, philippe, attal, retailleau, glucksmann, zemmour, roussel, tondelier, arthaud, nda, lisnard.
 
 Droits : n'utilisez que des photos et extraits dont vous avez les droits ou qui sont sous licence libre (Wikimedia Commons, avec attribution).
+
+Autre projet du dépôt : [Chansons de lutte](chansons-de-lutte/) — jeu de cartes musical (voir `chansons-de-lutte/README.md`).
