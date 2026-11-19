@@ -27,6 +27,7 @@ function carte(c) {
   const visible = !$("#f-cacher").checked || etat.revelees.has(c.id);
   const recto = el("div", { class: "face recto" },
     el("img", { src: `qr/${c.id}.svg`, alt: `QR code de la carte ${c.num}`, loading: "lazy", width: "160", height: "160" }),
+    c.version_tardive ? el("span", { class: "tardive", title: "Chanson écrite au moins 20 ans avant cet enregistrement" }, "⌛ Version tardive") : null,
     el("span", { class: "num" }, `n° ${c.num}`));
   const lieu = [c.pays, c.langue].filter(Boolean).join(" · ");
   const verso = el("div", { class: "face verso" },

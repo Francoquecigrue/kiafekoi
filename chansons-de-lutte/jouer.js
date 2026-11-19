@@ -211,6 +211,7 @@ function choisir(id, origine) {
   const c = etat.cartes.find((x) => x.id === id);
   $("#etat-carte").textContent = c ? `Carte n° ${c.num} prête.` : "Titre hors jeu prêt (absent de cartes.json).";
   $("#revelation").classList.add("cache");
+  $("#tardive").hidden = !(c && c.version_tardive);
   history.replaceState(null, "", location.pathname + "#" + id);
   log(`Carte choisie (${origine})${c ? ` : n° ${c.num}` : ""}.`);
   majBoutons();
@@ -222,6 +223,8 @@ function ficheCarte(c) {
   const ajout = (tag, txt, cls, parent = f) => { const n = document.createElement(tag); n.textContent = txt; if (cls) n.className = cls; parent.append(n); return n; };
   ajout("div", c.annee || "?", "annee");
   if (c.annee_source !== "composition") ajout("div", "date d'album, à vérifier", "alerte");
+  else if (c.annee_version && c.annee_version !== c.annee) ajout("div", `écrite en ${c.annee} · cette version : ${c.annee_version}`, "version");
+  else if (c.version_tardive) ajout("div", "cette version a été enregistrée bien plus tard", "version");
   ajout("strong", c.titre, "titre-fiche");
   ajout("div", c.artistes);
   ajout("div", [c.pays, c.langue].filter(Boolean).join(" · "), "etat");

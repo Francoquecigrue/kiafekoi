@@ -25,7 +25,10 @@ Colonnes :
 - `id`, `uri`, `isrc`, `titre_spotify`, `album`, `date_album`, `annee_album`, `explicite`, `duree_s`, `label`, `ligne_source` : issus de l'export Spotify (`ligne_source` = numéro de ligne dans le CSV 2).
 - `titre_carte` : titre imprimé (suffixes « Remastered », « Live »… retirés). Modifiable.
 - `artistes` : séparés par des virgules. À raccourcir si besoin (ex. « 11'30 contre les lois racistes »).
-- `annee_composition` : **vide, à compléter**. C'est l'année imprimée en grand. Tant qu'elle est vide, la carte affiche l'année de l'album avec la mention « date d'album, à vérifier ».
+- `annee_composition` : année d'**écriture** de la chanson. C'est l'année imprimée en grand et celle qu'on classe. Tant qu'elle est vide, la carte affiche l'année de l'album avec « date d'album, à vérifier », et elle est **exclue du mode solo**.
+- `annee_enregistrement` : année d'enregistrement de *cette* version. Elle diffère souvent de `date_album`, qui peut être celle d'une compilation ou d'une réédition. Si elle diffère de l'année d'écriture, le verso indique « écrite en X · cette version : Y ».
+- `version_tardive` : `oui`, `non` ou vide. Vide, elle est calculée : `oui` si l'enregistrement est postérieur d'au moins 20 ans à l'écriture. `oui` force le sablier quand l'année d'enregistrement est inconnue mais certainement tardive (chants du XVIIIe ou du XIXe siècle). Le sablier « Version tardive » apparaît au recto des cartes et pendant l'écoute.
+- Ces trois colonnes ont été **pré-remplies de mémoire** pour 58 et 56 chansons : à vérifier (voir `a_verifier`).
 - `pays`, `langue`, `cause` : **propositions à relire**, pas des données vérifiées. `pays` = pays ou région de la lutte évoquée, pas celui de l'interprète. Plusieurs causes séparées par `|`. Champ vide = inconnu.
 - `contexte` : vide, texte court du verso (environ 200 caractères maximum).
 - `verifie` : mettre `oui` une fois la ligne relue.
@@ -56,7 +59,7 @@ Second paragraphe.
 
 Dans `jouer.html`, étape 3, choisir « Solo ». Une première carte est révélée et posée sur la ligne du temps. Chaque chanson suivante est jouée à l'aveugle, et le joueur la place entre deux cartes. Une carte bien placée rejoint la ligne ; une carte mal placée est défaussée et compte une erreur. Une même année accepte les deux côtés. La partie s'arrête à 10 chansons bien placées. Le record, c'est-à-dire le plus petit nombre d'erreurs, est gardé dans le navigateur.
 
-L'année utilisée est celle de la carte : l'année de composition si elle est remplie, sinon l'année de l'album, souvent trompeuse. Le mode solo ne sera juste qu'une fois la colonne `annee_composition` complétée.
+Seules les chansons dont l'année d'écriture est connue sont jouées (58 pour l'instant). Le sablier prévient le joueur quand la version entendue a été enregistrée au moins 20 ans après l'écriture.
 
 ## Générer les cartes
 

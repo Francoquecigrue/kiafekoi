@@ -157,7 +157,8 @@ P = {
 
 COLONNES = [
     "id", "uri", "isrc", "titre_spotify", "titre_carte", "artistes", "album",
-    "date_album", "annee_album", "annee_composition", "pays", "langue", "cause",
+    "date_album", "annee_album", "annee_composition", "annee_enregistrement",
+    "version_tardive", "pays", "langue", "cause",
     "contexte", "explicite", "duree_s", "label", "ligne_source", "verifie",
     "a_verifier",
 ]
@@ -227,6 +228,8 @@ def main():
             "date_album": date,
             "annee_album": date[:4],
             "annee_composition": "",
+            "annee_enregistrement": "",
+            "version_tardive": "",
             "pays": pays,
             "langue": langue,
             "cause": cause,
