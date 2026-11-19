@@ -41,6 +41,7 @@ import qrcode.image.svg
 
 RACINE = Path(__file__).resolve().parent.parent
 CSV = RACINE / "data" / "chansons.csv"
+HISTOIRES = RACINE / "data" / "histoires.md"
 DOSSIER_QR = RACINE / "qr"
 DOSSIER_SORTIE = RACINE / "sortie"
 
@@ -58,10 +59,45 @@ RENDU = 4
 DPI = 300
 
 
+def lire_histoires():
+    """Lit data/histoires.md : une section « ## <id> · Titre — Artiste » par chanson.
+
+    Lignes reconnues : « statut: brouillon|vérifié », « sources: … » et « note: … »
+    (remarque interne, non publiée).
+    Le reste forme les paragraphes (séparés par une ligne vide).
+    """
+    if not HISTOIRES.exists():
+        return {}
+    histoires, courant = {}, None
+    for ligne in HISTOIRES.read_text(encoding="utf-8").splitlines():
+        if ligne.startswith("## "):
+            courant = {"lignes": [], "statut": "brouillon", "sources": []}
+            histoires[ligne[3:].split()[0]] = courant
+        elif courant is None or ligne.startswith("<!--"):
+            continue
+        elif ligne.startswith("note:"):
+            courant.setdefault("notes", []).append(ligne.split(":", 1)[1].strip())
+        elif ligne.startswith("statut:"):
+            courant["statut"] = ligne.split(":", 1)[1].strip()
+        elif ligne.startswith("sources:"):
+            courant["sources"] = [x.strip() for x in ligne.split(":", 1)[1].split(" ; ") if x.strip()]
+        else:
+            courant["lignes"].append(ligne)
+    for h in histoires.values():
+        paras = "\n".join(h.pop("lignes")).strip().split("\n\n")
+        h.pop("notes", None)
+        h["paragraphes"] = [" ".join(p.split()) for p in paras if p.strip()]
+    return histoires
+
+
 def lire_chansons():
     with CSV.open(encoding="utf-8", newline="") as f:
         lignes = list(csv.DictReader(f))
     lignes.sort(key=lambda r: int(r["ligne_source"]))
+    histoires = lire_histoires()
+    inconnues = set(histoires) - {r["id"] for r in lignes}
+    if inconnues:
+        sys.exit(f"histoires.md : identifiants absents de chansons.csv : {', '.join(sorted(inconnues))}")
     cartes = []
     for num, r in enumerate(lignes, 1):
         compo = r["annee_composition"].strip()
@@ -78,6 +114,9 @@ def lire_chansons():
             "causes": [c for c in r["cause"].split("|") if c],
             "contexte": r["contexte"],
             "explicite": r["explicite"] == "oui",
+            "histoire": histoires.get(r["id"], {}).get("paragraphes", []),
+            "histoire_statut": histoires.get(r["id"], {}).get("statut", ""),
+            "sources": histoires.get(r["id"], {}).get("sources", []),
         })
     return cartes
 
