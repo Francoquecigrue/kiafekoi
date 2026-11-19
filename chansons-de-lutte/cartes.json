@@ -42,9 +42,14 @@
   ],
   "contexte": "",
   "explicite": false,
-  "histoire": [],
-  "histoire_statut": "à documenter",
-  "sources": [],
+  "histoire": [
+   "Les Vulves Assassines, groupe de punk-rap féministe, publient « La retraite » en 2022 sur l'album « Das Kapital », consacré à la lutte des classes, au chômage et au travail.",
+   "En 2023, pendant le mouvement contre la réforme des retraites, la chanson est diffusée dans toutes les manifestations syndicales en France."
+  ],
+  "histoire_statut": "brouillon",
+  "sources": [
+   "https://festival.voixdefemmes.org/en/artists/les-vulves-assassines"
+  ],
   "qr_version": 6
  },
  {
@@ -115,10 +120,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "La « Table ronde » est la conférence réunie à Bruxelles en janvier et février 1960 entre la Belgique et les dirigeants congolais, qui fixe l'indépendance du Congo au 30 juin 1960. Grand Kallé (Joseph Kabasele) et l'African Jazz, venus à Bruxelles avec la délégation, y enregistrent plusieurs chansons sur l'événement."
+   "La « Table ronde » est la conférence réunie à Bruxelles en janvier et février 1960 entre la Belgique et les dirigeants congolais, qui fixe l'indépendance du Congo au 30 juin 1960. Grand Kallé (Joseph Kabasele) et l'African Jazz, venus à Bruxelles pour l'occasion, y jouent et y enregistrent plusieurs chansons sur l'événement.",
+   "Plus revendicative que « Indépendance Cha-Cha », sa jumelle festive, « Table ronde », en lingala et en français, soutient la cause de l'indépendance congolaise."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Table_Ronde",
+   "https://pan-african-music.com/en/round-table-independence-cha-cha/"
+  ],
   "qr_version": 6
  },
  {
@@ -190,10 +199,12 @@
   "explicite": false,
   "histoire": [
    "La « makhnovtchina » désigne le mouvement anarchiste paysan dirigé par Nestor Makhno en Ukraine pendant la guerre civile russe (1918-1921). Son armée combat les troupes allemandes, les armées blanches, puis l'Armée rouge, qui finit par l'écraser.",
-   "La chanson française, attribuée à Étienne Roda-Gil, date de la fin des années 1960. Elle est devenue un classique des concerts et des rassemblements libertaires."
+   "La chanson française célèbre cette épopée libertaire ; elle est devenue un classique des concerts et des rassemblements anarchistes, reprise notamment par Bérurier Noir."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://nestormakhno.info/english/song.htm"
+  ],
   "qr_version": 6
  },
  {
@@ -324,19 +335,24 @@
   "id": "1g6deCPEMyapxnFkqBU6lR",
   "titre": "La Libertat (Cançon de nèrvi)",
   "artistes": "Corala Occitania Lodova",
-  "annee": "2021",
-  "annee_source": "album",
+  "annee": "1892",
+  "annee_source": "composition",
   "annee_album": "2021",
-  "annee_version": "",
-  "version_tardive": false,
+  "annee_version": "2021",
+  "version_tardive": true,
   "pays": "France (Occitanie)",
   "langue": "occitan",
   "causes": [],
   "contexte": "",
   "explicite": false,
-  "histoire": [],
-  "histoire_statut": "à documenter",
-  "sources": [],
+  "histoire": [
+   "Chanson occitane de protestation politique et sociale, publiée à Marseille le 6 février 1892 dans le journal provençal « La Sartan » sous le titre « Cançon de nèrvi ». Elle est attribuée à J. Clozel.",
+   "Retrouvée par le journaliste Claude Barsotti, elle a été reprise par les chorales occitanes contemporaines, qui font revivre le répertoire de lutte en langue d'oc."
+  ],
+  "histoire_statut": "brouillon",
+  "sources": [
+   "https://www.ildeposito.org/canti/2803/pdf/testo"
+  ],
   "qr_version": 6
  },
  {
@@ -344,8 +360,8 @@
   "id": "2pe2ycdPpE5MWgRp6oiFAl",
   "titre": "Arbetlozer marsh",
   "artistes": "Bente Kahan",
-  "annee": "1992",
-  "annee_source": "album",
+  "annee": "1938",
+  "annee_source": "composition",
   "annee_album": "1992",
   "annee_version": "1992",
   "version_tardive": true,
@@ -357,11 +373,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "« La marche des chômeurs » est une chanson en yiddish de Mordkhe Gebirtig, charpentier et poète du quartier juif de Cracovie, écrite dans les années de crise et de chômage de masse de l'entre-deux-guerres en Pologne. Les chômeurs y comptent leurs pas, « un, deux, trois, quatre », sans travail ni pain.",
-   "Gebirtig a été tué dans le ghetto de Cracovie en 1942. Ses chansons, reprises par les survivants, sont devenues un patrimoine de la culture yiddish ouvrière. La chanteuse norvégienne Bente Kahan les a enregistrées dans son album « Farewell Cracow »."
+   "« La marche des chômeurs » est une chanson en yiddish de Mordkhe Gebirtig, charpentier et poète du quartier juif de Cracovie, écrite en 1938 dans la Pologne frappée par la crise et le chômage de masse. Les chômeurs y comptent leurs pas, « un, deux, trois, quatre », sans travail ni pain.",
+   "Gebirtig a été tué dans le ghetto de Cracovie en 1942. Ses chansons sont devenues un patrimoine de la culture ouvrière yiddish. La chanteuse norvégienne Bente Kahan les a enregistrées dans son album « Farewell Cracow »."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://savethemusic.com/?p=19850",
+   "https://en.wikipedia.org/wiki/Mordechai_Gebirtig"
+  ],
   "qr_version": 6
  },
  {
@@ -380,10 +399,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "« L'argent du loyer » : une chanson en yiddish sur une famille pauvre qui ne peut plus payer son loyer et se retrouve menacée d'expulsion. Elle appartient au répertoire de la vie ouvrière juive d'Europe de l'Est de l'entre-deux-guerres."
+   "« L'argent du loyer » : chanson populaire yiddish anonyme, publiée en 1912 par le folkloriste Y. L. Cahan. Elle raconte une famille pauvre incapable de payer son loyer et menacée d'expulsion par le propriétaire.",
+   "C'est un témoignage sur la misère ouvrière juive d'Europe de l'Est plus qu'un chant de combat : sa place dans le jeu est à discuter."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://yiddishsongs.org/dire-gelt/",
+   "https://ruthrubin.yivo.org/items/show/5406"
+  ],
   "qr_version": 6
  },
  {
@@ -416,8 +439,8 @@
   "id": "18h1qlsxljVsQSUsuw11k1",
   "titre": "Leve Palestina",
   "artistes": "KOFIA",
-  "annee": "2023",
-  "annee_source": "album",
+  "annee": "1978",
+  "annee_source": "composition",
   "annee_album": "2023",
   "annee_version": "",
   "version_tardive": false,
@@ -429,11 +452,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Écrite en suédois à la fin des années 1970 par George Totari, Palestinien installé en Suède, pour son groupe Kofia, formé pour soutenir la cause palestinienne. Le refrain « Leve Palestina » (Vive la Palestine) est suivi d'un appel à « écraser le sionisme ».",
+   "Écrite en suédois par George Totari, musicien né à Nazareth et installé en Suède, pour son groupe Kofia, formé pour soutenir la cause palestinienne. Elle paraît en 1978 ou 1979. Le refrain « Leve Palestina » (Vive la Palestine) est suivi d'un appel à « écraser le sionisme ».",
    "Oubliée pendant des décennies, elle est redevenue virale sur les réseaux sociaux et dans les manifestations à partir de 2023, pendant la guerre à Gaza. Ses paroles font débat."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Leve_Palestina",
+   "https://www.aljazeera.com/features/2024/8/11/leve-palestina-the-1970s-song-that-became-an-antiwar-anthem-in-sweden"
+  ],
   "qr_version": 6
  },
  {
@@ -441,19 +467,24 @@
   "id": "7mMC7vXmOB5jkZUUvRigRm",
   "titre": "La Libertat",
   "artistes": "Le Chœur du Lamparo",
-  "annee": "2021",
-  "annee_source": "album",
+  "annee": "1892",
+  "annee_source": "composition",
   "annee_album": "2021",
-  "annee_version": "",
-  "version_tardive": false,
+  "annee_version": "2021",
+  "version_tardive": true,
   "pays": "France (Occitanie)",
   "langue": "occitan",
   "causes": [],
   "contexte": "",
   "explicite": false,
-  "histoire": [],
-  "histoire_statut": "à documenter",
-  "sources": [],
+  "histoire": [
+   "Chanson occitane de protestation politique et sociale, publiée à Marseille le 6 février 1892 dans le journal provençal « La Sartan » sous le titre « Cançon de nèrvi ». Elle est attribuée à J. Clozel.",
+   "Retrouvée par le journaliste Claude Barsotti, elle a été reprise par les chorales occitanes contemporaines, qui font revivre le répertoire de lutte en langue d'oc."
+  ],
+  "histoire_statut": "brouillon",
+  "sources": [
+   "https://www.ildeposito.org/canti/2803/pdf/testo"
+  ],
   "qr_version": 6
  },
  {
@@ -698,11 +729,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "« L'Hymne des femmes » a été écrit collectivement en 1971 par des militantes du Mouvement de libération des femmes (MLF), sur l'air du « Chant des marais ». Il devient le chant des manifestations féministes françaises, en particulier pour le droit à l'avortement.",
-   "En 2018, après le mouvement #MeToo, 39 chanteuses et actrices en enregistrent une nouvelle version."
+   "En mars 1971, une douzaine de féministes réunies chez l'écrivaine Monique Wittig écrivent « L'Hymne des femmes » sur l'air du « Chant des marais », pour un rassemblement célébrant le centenaire de la Commune. Il devient le chant des manifestations du Mouvement de libération des femmes, en particulier pour le droit à l'avortement.",
+   "En 2018, après le mouvement #MeToo, 39 chanteuses et actrices menées par Brigitte en enregistrent une nouvelle version, « Debout les femmes », au profit de La Maison des femmes."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/L%27Hymne_du_MLF",
+   "https://www.chartsinfrance.net/Brigitte/news-108668.html"
+  ],
   "qr_version": 6
  },
  {
@@ -873,11 +907,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "« A la huelga, compañeros » appelle à la grève générale contre la dictature franquiste. Elle est liée aux grandes grèves des mineurs des Asturies au début des années 1960, et circule parmi les chansons clandestines de la résistance antifranquiste.",
+   "« A la huelga, compañeros » appelle à la grève générale contre la dictature franquiste. Elle naît au moment des grandes grèves des mineurs des Asturies de 1962-1963, et circule parmi les chansons clandestines de la résistance antifranquiste ; un premier enregistrement est réalisé clandestinement à Madrid en 1963.",
    "Le Chilien Rolando Alarcón l'a enregistrée dans ses albums de chants espagnols."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Chicho_S%C3%A1nchez_Ferlosio",
+   "https://en.wikipedia.com/wiki/Asturian_miners%27_strike_of_1962"
+  ],
   "qr_version": 6
  },
  {
@@ -1011,8 +1048,8 @@
   "id": "7MK5PBuGOKdlCPVHONHtcQ",
   "titre": "Soritis Petroulas",
   "artistes": "Mikis Theodorakis",
-  "annee": "1971",
-  "annee_source": "album",
+  "annee": "1965",
+  "annee_source": "composition",
   "annee_album": "1971",
   "annee_version": "",
   "version_tardive": false,
@@ -1024,11 +1061,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Sotiris Petroulas, étudiant et militant de la jeunesse de gauche, est tué en juillet 1965 à Athènes lors des manifestations contre la crise politique provoquée par le roi Constantin. Son enterrement devient une immense manifestation. Mikis Theodorakis lui consacre cette chanson.",
+   "Sotiris Petroulas, étudiant et militant de la jeunesse de gauche, est tué le 21 juillet 1965 à Athènes lors des manifestations contre le renvoi du gouvernement par le roi Constantin. Mikis Theodorakis lui consacre aussitôt cette chanson, chantée par la foule qui accompagne son cercueil.",
    "Deux ans plus tard, la dictature des colonels (1967-1974) interdit la musique de Theodorakis, emprisonné puis exilé."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://brahms.ircam.fr/en/work/sotiris-petroulas",
+   "https://en.wikipedia.org/wiki/Sotiris_Petroulas"
+  ],
   "qr_version": 6
  },
  {
@@ -1036,8 +1076,8 @@
   "id": "3L1bnhUradYVpa6jSzwbOd",
   "titre": "L'appel du komintern",
   "artistes": "Revolutionary Protest Choir",
-  "annee": "2012",
-  "annee_source": "album",
+  "annee": "1926",
+  "annee_source": "composition",
   "annee_album": "2012",
   "annee_version": "",
   "version_tardive": false,
@@ -1049,11 +1089,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Le « Kominternlied » est un chant allemand de la fin des années 1920, musique de Hanns Eisler, écrit pour l'Internationale communiste (Komintern, 1919-1943), qui coordonnait les partis communistes du monde entier. Il appelle les prolétaires de tous les pays à se lever.",
-   "Sa version française, « L'appel du Komintern », a été chantée dans les milieux communistes français."
+   "Le texte du « Kominternlied » est écrit en 1926 par Franz Jahnke et Maxim Vallentin ; Hanns Eisler le met en musique pour le dixième anniversaire de l'Internationale communiste (Komintern, 1919-1943), qui coordonnait les partis communistes du monde entier. Il est créé à Berlin en 1929.",
+   "Sa version française, « L'appel du Komintern », appelle les prolétaires de tous les pays à se lever ; elle a été chantée dans les milieux communistes français."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kominternlied",
+   "https://www.marxists.org/subject/art/music/lyrics/fr/appel-komintern.htm"
+  ],
   "qr_version": 6
  },
  {
@@ -1186,10 +1229,10 @@
   "id": "0dOg1ySSI7NkpAe89Zo0b9",
   "titre": "Born in the U.S.A.",
   "artistes": "Bruce Springsteen",
-  "annee": "1984",
+  "annee": "1982",
   "annee_source": "composition",
   "annee_album": "1984",
-  "annee_version": "1984",
+  "annee_version": "1982",
   "version_tardive": false,
   "pays": "États-Unis",
   "langue": "anglais",
@@ -1199,11 +1242,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Sous un refrain qui sonne comme un hymne patriotique, Bruce Springsteen raconte en 1984 l'histoire d'un ouvrier envoyé au Viêt Nam, puis abandonné à son retour : pas de travail, pas d'aide, un frère mort au combat.",
+   "Bruce Springsteen écrit la chanson fin 1981 et l'enregistre en 1982 ; elle sort en 1984. Sous un refrain qui sonne comme un hymne patriotique, elle raconte un ouvrier envoyé au Viêt Nam, puis abandonné à son retour : pas de travail, pas d'aide, un frère mort au combat.",
    "La chanson a été souvent mal comprise, au point que le président Ronald Reagan l'a citée en campagne. C'est en réalité une chanson amère sur la classe ouvrière américaine et les vétérans."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Born_in_the_U.S.A._(song)",
+   "https://www.rollingstone.com/music/music-features/bruce-springsteen-wrote-born-in-usa-exclusive-book-excerpt-811634"
+  ],
   "qr_version": 6
  },
  {
@@ -1331,7 +1377,7 @@
   "id": "2dOMGYKzJpnlFJRSa8dvwL",
   "titre": "Grândola, Vila Morena",
   "artistes": "José Afonso",
-  "annee": "1971",
+  "annee": "1964",
   "annee_source": "composition",
   "annee_album": "1971",
   "annee_version": "1971",
@@ -1344,11 +1390,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "José « Zeca » Afonso compose en 1971 cet hommage à la fraternité des ouvriers de la ville de Grândola, au sud du Portugal, alors sous la dictature de l'Estado Novo. « C'est le peuple qui commande », dit la chanson.",
+   "En mai 1964, José « Zeca » Afonso chante pour la société ouvrière musicale de Grândola, au sud du Portugal, alors sous la dictature de l'Estado Novo. Il lui dédie ensuite ce poème sur la fraternité des ouvriers, « c'est le peuple qui commande », qu'il enregistre en 1971 et que la censure laisse passer.",
    "Le 25 avril 1974 à minuit vingt, sa diffusion à la radio sert de signal aux militaires qui déclenchent la révolution des Œillets et renversent la dictature. Elle a été rechantée dans les manifestations contre l'austérité en 2012-2013."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gr%C3%A2ndola,_Vila_Morena",
+   "https://www.rtp.pt/noticias/estorias/grandola-a-cancao-que-a-censura-deixou-passar_n730159"
+  ],
   "qr_version": 6
  },
  {
@@ -1426,10 +1475,10 @@
   "id": "3mH0Lmh3xjk16INiPISHq7",
   "titre": "A Luta Continua",
   "artistes": "Miriam Makeba",
-  "annee": "2012",
-  "annee_source": "album",
+  "annee": "1975",
+  "annee_source": "composition",
   "annee_album": "2012",
-  "annee_version": "",
+  "annee_version": "1989",
   "version_tardive": false,
   "pays": "Mozambique",
   "langue": "",
@@ -1439,11 +1488,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "« A luta continua » (la lutte continue) est le slogan du FRELIMO, le mouvement de libération du Mozambique contre la colonisation portugaise, repris par son dirigeant Samora Machel. Le Mozambique devient indépendant le 25 juin 1975.",
-   "Miriam Makeba, chanteuse sud-africaine exilée et militante contre l'apartheid, en fait une chanson en hommage à cette indépendance."
+   "« A luta continua » (la lutte continue) est le cri de ralliement du FRELIMO, le mouvement de libération du Mozambique contre la colonisation portugaise. Le Mozambique devient indépendant le 25 juin 1975.",
+   "Miriam Makeba, chanteuse sud-africaine exilée, assiste aux cérémonies avec la délégation guinéenne ; sa fille Bongi écrit cette chanson pour l'occasion. Makeba l'enregistre en 1989 sur l'album « Welela », alors que l'apartheid n'est pas encore tombé."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/A_luta_continua",
+   "https://pan-african-music.com/en/miriam-makeba-and-the-fight-goes-on/"
+  ],
   "qr_version": 6
  },
  {
@@ -1496,8 +1548,8 @@
   "id": "0UO6j3Nyor7zuJdB3ldNxQ",
   "titre": "A Piece of Ground",
   "artistes": "Miriam Makeba",
-  "annee": "2017",
-  "annee_source": "album",
+  "annee": "1962",
+  "annee_source": "composition",
   "annee_album": "2017",
   "annee_version": "",
   "version_tardive": false,
@@ -1509,10 +1561,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Chanson sur la dépossession des terres des Noirs d'Afrique du Sud par les colons, puis par les lois de l'apartheid qui réservent l'essentiel du territoire à la minorité blanche. Miriam Makeba, exilée à partir de 1960, l'a enregistrée dans les années 1960."
+   "Écrite en 1962 par le Sud-Africain Jeremy Taylor pour la revue musicale « Wait a Minim », la chanson parle de la dépossession des terres des Noirs d'Afrique du Sud par les colons, puis par les lois de l'apartheid qui réservent l'essentiel du territoire à la minorité blanche.",
+   "Miriam Makeba, exilée depuis 1960, l'enregistre à partir de 1966. Elle devient un chant de ralliement des mouvements noirs de protestation des années 1970 et 1980."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://jeremytaylormusic.com/schools.html",
+   "https://miriammakeba.co.za/releases/Tracks-Less-Travelled-1958-1998"
+  ],
   "qr_version": 6
  },
  {
@@ -1530,9 +1586,13 @@
   "causes": [],
   "contexte": "",
   "explicite": false,
-  "histoire": [],
-  "histoire_statut": "à documenter",
-  "sources": [],
+  "histoire": [
+   "« L'hymne de la liberté », paru fin octobre 2022, en plein soulèvement « Femme, vie, liberté » qui suit la mort de Mahsa Jina Amini en Iran. Un « Sorud-e Āzādi » anonyme, aussi appelé « Barpākhiz » (Lève-toi), compte parmi les chants les plus repris du mouvement."
+  ],
+  "histoire_statut": "brouillon",
+  "sources": [
+   "https://cambridge.org/core/services/aop-cambridge-core/content/view/D05CDF27B4A1D85E409ADD24951C0E1B/S0021086223000154a.pdf/women-reclaiming-their-voices-for-life-and-freedom-music-and-the-2022-uprising-in-iran.pdf"
+  ],
   "qr_version": 6
  },
  {
@@ -1553,11 +1613,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "« Sodade », la nostalgie en créole capverdien, évoque le départ des Capverdiens envoyés travailler dans les plantations de São Tomé à l'époque coloniale portugaise, souvent dans des conditions proches du travail forcé. La chanson est attribuée à Armando Zeferino Soares.",
+   "« Sodade », la nostalgie en créole capverdien, évoque le départ des Capverdiens partis travailler dans les plantations de São Tomé à l'époque coloniale portugaise, souvent dans des conditions proches du travail forcé. Armando Zeferino Soares dit l'avoir composée dans les années 1950 pour des amis qui s'embarquaient pour São Tomé ; un tribunal lui en a reconnu la paternité en 2006.",
    "Cesária Évora la fait connaître dans le monde entier en 1992. Le rapport à la lutte tient à la mémoire de l'exil et de l'exploitation coloniale, sans appel au combat."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Armando_Zeferino_Soares",
+   "https://wikipedia.com/wiki/Sodade"
+  ],
   "qr_version": 6
  },
  {
@@ -1690,19 +1753,24 @@
   "id": "05VQCQ0wA5hJBlYao2FoAa",
   "titre": "La Libertat",
   "artistes": "Lo Cor de la Plana",
-  "annee": "2012",
-  "annee_source": "album",
+  "annee": "1892",
+  "annee_source": "composition",
   "annee_album": "2012",
-  "annee_version": "",
-  "version_tardive": false,
+  "annee_version": "2012",
+  "version_tardive": true,
   "pays": "France (Occitanie)",
   "langue": "occitan",
   "causes": [],
   "contexte": "",
   "explicite": false,
-  "histoire": [],
-  "histoire_statut": "à documenter",
-  "sources": [],
+  "histoire": [
+   "Chanson occitane de protestation politique et sociale, publiée à Marseille le 6 février 1892 dans le journal provençal « La Sartan » sous le titre « Cançon de nèrvi ». Elle est attribuée à J. Clozel.",
+   "Retrouvée par le journaliste Claude Barsotti, elle a été reprise par les chorales occitanes contemporaines, qui font revivre le répertoire de lutte en langue d'oc."
+  ],
+  "histoire_statut": "brouillon",
+  "sources": [
+   "https://www.ildeposito.org/canti/2803/pdf/testo"
+  ],
   "qr_version": 6
  },
  {
@@ -1816,10 +1884,13 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Lucilla Galeazzi, chanteuse de Terni, ville industrielle de l'Ombrie, a fait revivre les chants de travail de sa région. « Cinturini » renverrait aux ouvrières de la filature de jute Centurini de Terni."
+   "Chanson en dialecte de Terni, écrite par Lucilla Galeazzi et Valentino Paparelli. Elle raconte les ouvrières de la filature de jute ouverte à Terni au début du XXe siècle par l'ingénieur Centurini, dont le nom était déformé en « Cinturini » dans le parler local.",
+   "Lucilla Galeazzi, née à Terni en 1950, a consacré une grande part de son œuvre à la mémoire ouvrière de sa ville industrielle."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://www.ildeposito.org/canti/615/pdf/testo"
+  ],
   "qr_version": 6
  },
  {
@@ -1904,9 +1975,13 @@
   ],
   "contexte": "",
   "explicite": false,
-  "histoire": [],
-  "histoire_statut": "à documenter",
-  "sources": [],
+  "histoire": [
+   "Chanson de protestation espagnole de l'entre-deux-guerres, anticléricale, sur la faim des pauvres (« sin pan », sans pain). Elle appartient au répertoire chanté pendant la guerre civile, repris par les chorales militantes après la mort de Franco."
+  ],
+  "histoire_statut": "brouillon",
+  "sources": [
+   "https://www.ildeposito.org/canti/623/pdf/testo"
+  ],
   "qr_version": 6
  },
  {
@@ -1970,10 +2045,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Super Mama Djombo est le groupe phare de la Guinée-Bissau des années 1970, né pendant la guerre d'indépendance menée par le PAIGC d'Amílcar Cabral contre le Portugal (indépendance en 1973-1974), et associé aux premières années du pays indépendant."
+   "Super Mama Djombo est le groupe phare de la Guinée-Bissau des années 1970 ; ses chansons anticoloniales ont accompagné le PAIGC d'Amílcar Cabral dans la lutte pour l'indépendance contre le Portugal.",
+   "« Dissan Na M'bera », écrite par Adriano Atchutchi après l'indépendance, signifie à peu près « Laisse-moi marcher au bord de la route » : ne m'écrase pas avec ta voiture de fonction. Une critique de la nouvelle élite au pouvoir, et le plus grand succès du groupe."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://www.robertchristgau.com/get_artist.php?id=5263",
+   "https://www.wikipedia.com/wiki/Super_Mama_Djombo"
+  ],
   "qr_version": 6
  },
  {
@@ -2016,9 +2095,15 @@
   "causes": [],
   "contexte": "",
   "explicite": false,
-  "histoire": [],
-  "histoire_statut": "à documenter",
-  "sources": [],
+  "histoire": [
+   "« Territoire » : le collectif de hip-hop philippin Morobeats y défend la souveraineté des Philippines sur la mer des Philippines occidentale, que revendique la Chine. Le morceau évoque l'affrontement violent de juin 2024 entre la marine philippine et les garde-côtes chinois près du récif d'Ayungin, et les pêcheurs privés de leurs zones de pêche traditionnelles.",
+   "La coalition citoyenne Atin Ito l'a jouée lors de ses missions civiles en mer, et a lancé en 2025 un défi invitant chacun à rapper sur sa musique."
+  ],
+  "histoire_statut": "brouillon",
+  "sources": [
+   "https://www.abs-cbn.com/news/nation/2025/5/30/teritoryo-namin-to-filipino-hiphop-group-morobeats-makes-waves-with-song-for-wps-0937",
+   "https://www.scmp.com/week-asia/lifestyle-culture/article/3322881/filipinos-rap-resistance-south-china-sea-music-challenge-rallying-cry-unity"
+  ],
   "qr_version": 6
  },
  {
@@ -2062,7 +2147,7 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Viktor Tsoï, chanteur du groupe Kino, figure du rock soviétique non officiel des années 1980. Dans « Le train de banlieue », le narrateur est emporté là où il ne veut pas aller, une métaphore de la vie sans choix en URSS.",
+   "Viktor Tsoï, chanteur du groupe Kino, figure du rock soviétique non officiel des années 1980. « Le train de banlieue », enregistrée dès 1982 sur le premier album du groupe, raconte un homme emporté là où il ne veut pas aller : une métaphore de la vie sans choix en URSS.",
    "Le lien à la lutte est plus net dans « Хочу перемен » (Je veux du changement), devenu un hymne de la perestroïka puis des manifestations en Russie et en Biélorussie."
   ],
   "histoire_statut": "brouillon",
@@ -2132,11 +2217,14 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Composée en 1981-1982, sur un poème de Baek Ki-wan mis en musique par Kim Jong-ryul, pour un « mariage posthume » entre Yoon Sang-won, tué lors du soulèvement de Gwangju en mai 1980 réprimé dans le sang par l'armée, et la militante ouvrière Park Gi-sun.",
-   "Elle devient l'hymne du mouvement démocratique sud-coréen et se chante chaque année à la commémoration de Gwangju. Elle a été reprise dans d'autres luttes en Asie, notamment à Hong Kong."
+   "En mai 1980, l'armée écrase dans le sang le soulèvement démocratique de Gwangju. En 1982, l'écrivain Hwang Sok-yong écrit les paroles à partir d'un poème composé en prison par le militant Baek Ki-wan, et l'étudiant Kim Jong-ryul compose la musique, pour un spectacle célébrant le « mariage posthume » de Yoon Sang-won, tué à Gwangju, et de la militante ouvrière Park Gi-sun.",
+   "Enregistrée officiellement en 1991 par le collectif Noraereul Chatneun Saramdeul, elle devient l'hymne du mouvement démocratique sud-coréen et se chante chaque année à la commémoration de Gwangju. Elle a été reprise dans d'autres luttes en Asie, notamment à Hong Kong."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://mobile.newsis.com/view/NISX20200516_0001027045",
+   "https://www.khan.co.kr/article/201705181603001/amp"
+  ],
   "qr_version": 6
  },
  {
@@ -2186,7 +2274,10 @@
    "Şivan Perwer, chanteur kurde de Turquie, s'exile en 1976 parce que chanter en kurde y est interdit. Il devient la voix la plus célèbre de la musique kurde en exil."
   ],
   "histoire_statut": "brouillon",
-  "sources": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ey_Req%C3%AEb",
+   "https://en.wikipedia.org/wiki/Dildar_(poet)"
+  ],
   "qr_version": 6
  },
  {
@@ -2207,7 +2298,7 @@
   "contexte": "",
   "explicite": false,
   "histoire": [
-   "Canta U Populu Corsu, fondé en 1973, est le groupe emblématique du « riacquistu », la réappropriation de la langue et de la culture corses dans les années 1970, liée à la montée du mouvement nationaliste."
+   "Canta U Populu Corsu, fondé au début des années 1970, est le groupe emblématique du « riacquistu », la réappropriation de la langue et de la culture corses, liée à la montée du mouvement nationaliste."
   ],
   "histoire_statut": "brouillon",
   "sources": [],
