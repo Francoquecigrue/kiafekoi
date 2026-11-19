@@ -18,8 +18,10 @@ function melanger(liste) {
 }
 
 function nouvellePartie() {
-  const jouables = etat.cartes.filter((c) => Number.isFinite(anneeNum(c)));
-  if (jouables.length < OBJECTIF + 1) { log("Pas assez de cartes avec une année pour jouer en solo.", "erreur"); return; }
+  // Seules les chansons dont l'année d'écriture est connue sont jouables en solo.
+  const jouables = etat.cartes.filter((c) => c.annee_source === "composition" && Number.isFinite(anneeNum(c)));
+  if (jouables.length < OBJECTIF + 1) { log("Pas assez de cartes avec une année d'écriture pour jouer en solo.", "erreur"); return; }
+  log(`Solo : ${jouables.length} chansons jouables (année d'écriture connue).`);
   solo.pioche = melanger(jouables);
   solo.ligne = [solo.pioche.pop()]; // carte de départ, révélée
   solo.places = 0;
@@ -93,6 +95,7 @@ function afficherSolo() {
 
   const ecoute = solo.phase === "ecoute";
   $("#solo-mystere").hidden = !ecoute;
+  $("#solo-tardive").hidden = !(ecoute && solo.courante?.version_tardive);
   $("#solo-aide").textContent = appareilCible()
     ? "Choisissez « Placer ici » à l'endroit où cette chanson se situe dans le temps."
     : "Connectez-vous et choisissez où jouer le son (étapes 1 et 2) pour entendre la chanson.";

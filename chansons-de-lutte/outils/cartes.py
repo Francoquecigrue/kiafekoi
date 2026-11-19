@@ -53,6 +53,11 @@ FOND_PERDU = 2
 CARTE = 90 + 2 * FOND_PERDU  # 94 mm avant découpe
 SECURITE = 2  # marge intérieure : zone utile 86 x 86 mm
 QR_MM = 54
+ECART_TARDIF = 20  # ans entre écriture et enregistrement au-delà desquels on prévient le joueur
+# Sablier : symbole « version tardive », au recto et pendant l'écoute.
+SABLIER = ('<svg class="sablier" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+           'stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3c0 5 5 6 5 9s-5 4-5 9'
+           'M17 3c0 5-5 6-5 9s5 4 5 9"/></svg>')
 # Chrome arrondit la mise en page au pixel CSS (0,26 mm) : on rend les cartes
 # à l'échelle RENDU puis l'imposition les ramène exactement à 94 mm.
 RENDU = 4
@@ -101,6 +106,12 @@ def lire_chansons():
     cartes = []
     for num, r in enumerate(lignes, 1):
         compo = r["annee_composition"].strip()
+        enreg = r.get("annee_enregistrement", "").strip()
+        force = r.get("version_tardive", "").strip().lower()
+        if force in ("oui", "non"):
+            tardive = force == "oui"
+        else:
+            tardive = bool(compo and enreg) and int(enreg) - int(compo) >= ECART_TARDIF
         cartes.append({
             "num": num,
             "id": r["id"],
@@ -109,6 +120,8 @@ def lire_chansons():
             "annee": compo or r["annee_album"],
             "annee_source": "composition" if compo else "album",
             "annee_album": r["annee_album"],
+            "annee_version": enreg,
+            "version_tardive": tardive,
             "pays": r["pays"],
             "langue": r["langue"],
             "causes": [c for c in r["cause"].split("|") if c],
@@ -183,14 +196,21 @@ def recto(c, svg):
     return f"""<div class="carte recto">
   <div class="marque">Chansons de lutte</div>
   {svg_inline(svg)}
-  <div class="num">n° {c['num']}</div>
+  <div class="bas">{'<span class="tardive">' + SABLIER + 'Version tardive</span>' if c['version_tardive'] else ''}<span class="num">n° {c['num']}</span></div>
 </div>"""
 
 
 def verso(c):
     e = html.escape
     lieu = " · ".join(x for x in (c["pays"], c["langue"]) if x)
-    annee_note = "" if c["annee_source"] == "composition" else '<div class="alerte">date d\'album, à vérifier</div>'
+    if c["annee_source"] != "composition":
+        annee_note = '<div class="alerte">date d\'album, à vérifier</div>'
+    elif c["annee_version"] and c["annee_version"] != c["annee"]:
+        annee_note = f'<div class="version">écrite en {e(c["annee"])} · cette version : {e(c["annee_version"])}</div>'
+    elif c["version_tardive"]:
+        annee_note = '<div class="version">cette version a été enregistrée bien plus tard</div>'
+    else:
+        annee_note = ""
     causes = " · ".join(c["causes"])
     explicite = '<span class="explicite">E</span>' if c["explicite"] else ""
     return f"""<div class="carte verso">
@@ -215,7 +235,11 @@ body {{ font-family: "Noto Sans", "Noto Sans CJK SC", "Noto Sans Arabic", "Noto 
 .recto {{ display: flex; flex-direction: column; align-items: center; justify-content: space-between; background: #b3261e; color: #fff; }}
 .recto .marque {{ font-size: 4mm; letter-spacing: 0.5mm; text-transform: uppercase; font-weight: 700; }}
 .recto .qr {{ width: {QR_MM}mm; height: {QR_MM}mm; background: #fff; border-radius: 2mm; }}
-.recto .num {{ font-size: 3mm; }}
+.recto .bas {{ display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 1mm; font-size: 3mm; min-height: 9mm; }}
+.recto .tardive {{ display: inline-flex; align-items: center; gap: 1mm; font-weight: 700; background: #fff; color: #b3261e;
+  border-radius: 3mm; padding: 0.6mm 2.2mm; font-size: 3mm; }}
+.sablier {{ width: 3.6mm; height: 3.6mm; }}
+.verso .version {{ font-size: 2.6mm; color: #555; }}
 .verso {{ display: flex; flex-direction: column; align-items: center; text-align: center; }}
 .verso .lieu {{ font-size: 3mm; text-transform: uppercase; letter-spacing: 0.2mm; color: #555; min-height: 3.5mm; }}
 .verso .annee {{ font-size: 17mm; font-weight: 800; line-height: 1; margin: 3mm 0 1mm; color: #b3261e; }}
@@ -336,7 +360,8 @@ def main():
 
     sans_compo = sum(1 for c in cartes if c["annee_source"] != "composition")
     if sans_compo:
-        print(f"Attention : {sans_compo} cartes sans année de composition (année d'album affichée).")
+        print(f"Attention : {sans_compo} cartes sans année de composition (année d'album affichée, exclues du mode solo).")
+    print(f"{sum(1 for c in cartes if c['version_tardive'])} cartes marquées « version tardive » (écart ≥ {ECART_TARDIF} ans).")
 
     if args.sans_pdf:
         return
