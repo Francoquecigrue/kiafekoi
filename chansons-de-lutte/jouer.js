@@ -109,9 +109,11 @@ function chargerSdk() {
     const player = new Spotify.Player({ name: "Chansons de lutte (test)", getOAuthToken: (cb) => jeton().then(cb), volume: 0.8 });
     etat.player = player;
     player.addListener("ready", ({ device_id }) => {
+      // Le SDK se reconnecte à chaque renouvellement du jeton (toutes les heures) :
+      // on ne journalise que le premier « prêt » ou un changement d'appareil.
+      if (etat.deviceSdk !== device_id) log(`Lecteur prêt (appareil ${device_id.slice(0, 6)}…).`);
       etat.deviceSdk = device_id;
       $("#etat-lecteur").textContent = "Lecteur du navigateur prêt.";
-      log(`Lecteur prêt (appareil ${device_id.slice(0, 6)}…).`);
       majBoutons();
     });
     player.addListener("not_ready", () => { etat.deviceSdk = null; log("Lecteur hors ligne.", "erreur"); majBoutons(); });
@@ -124,7 +126,7 @@ function chargerSdk() {
       if (!s) return;
       // Volontairement aucune métadonnée du titre ici.
       etat.joue = !s.paused;
-      $("#disque").classList.toggle("tourne", etat.joue);
+      disques(etat.joue);
       masquerMediaSession();
     });
     player.connect().then((ok) => log(ok ? "Connexion du lecteur demandée." : "player.connect() a échoué.", ok ? "info" : "erreur"));
@@ -179,7 +181,7 @@ async function lire() {
     }
   }
   etat.joue = true;
-  $("#disque").classList.add("tourne");
+  disques(true);
   log("Lecture lancée.");
   setTimeout(masquerMediaSession, 1500);
 }
@@ -188,8 +190,12 @@ async function pause() {
   try {
     if (etat.player && mode() === "sdk") await etat.player.pause();
     else await api("PUT", `/me/player/pause?device_id=${encodeURIComponent(appareilCible() || "")}`);
-    etat.joue = false; $("#disque").classList.remove("tourne");
+    etat.joue = false; disques(false);
   } catch (e) { log(e.message, "erreur"); }
+}
+
+function disques(tourne) {
+  document.querySelectorAll(".disque").forEach((d) => d.classList.toggle("tourne", tourne));
 }
 
 // ---------- Choix de la carte ----------
@@ -210,18 +216,34 @@ function choisir(id, origine) {
   majBoutons();
 }
 
+// Fiche d'une carte révélée : année, titre, artiste, puis l'histoire de la chanson.
+function ficheCarte(c) {
+  const f = document.createDocumentFragment();
+  const ajout = (tag, txt, cls, parent = f) => { const n = document.createElement(tag); n.textContent = txt; if (cls) n.className = cls; parent.append(n); return n; };
+  ajout("div", c.annee || "?", "annee");
+  if (c.annee_source !== "composition") ajout("div", "date d'album, à vérifier", "alerte");
+  ajout("strong", c.titre, "titre-fiche");
+  ajout("div", c.artistes);
+  ajout("div", [c.pays, c.langue].filter(Boolean).join(" · "), "etat");
+  if (c.contexte) ajout("p", c.contexte);
+  if (c.histoire && c.histoire.length) {
+    const d = document.createElement("details");
+    d.className = "histoire"; d.open = true;
+    ajout("summary", "Pourquoi c'est une chanson de lutte", null, d);
+    c.histoire.forEach((para) => ajout("p", para, null, d));
+    if (c.histoire_statut !== "vérifié") ajout("p", "Texte provisoire, en cours de vérification.", "alerte-texte", d);
+    f.append(d);
+  }
+  return f;
+}
+
 async function reveler() {
   const c = etat.cartes.find((x) => x.id === etat.idCourant);
   const r = $("#revelation");
   r.replaceChildren();
   const ajout = (tag, txt, cls) => { const n = document.createElement(tag); n.textContent = txt; if (cls) n.className = cls; r.append(n); };
   if (c) {
-    ajout("div", c.annee || "?", "annee");
-    if (c.annee_source !== "composition") ajout("div", "date d'album, à vérifier", "alerte");
-    ajout("strong", c.titre);
-    ajout("div", c.artistes);
-    ajout("div", [c.pays, c.langue].filter(Boolean).join(" · "), "etat");
-    if (c.contexte) ajout("p", c.contexte);
+    r.append(ficheCarte(c));
   } else {
     try {
       const t = await api("GET", "/tracks/" + etat.idCourant);
@@ -277,6 +299,7 @@ function majBoutons() {
   $("#lecture").disabled = !pret;
   $("#pause").disabled = !pret;
   $("#reveler").disabled = !etat.idCourant;
+  if (typeof soloMajBoutons === "function") soloMajBoutons();
 }
 
 async function majConnexion() {
@@ -324,6 +347,12 @@ async function demarrer() {
     majBoutons();
   }));
   $("#appareils").addEventListener("change", majBoutons);
+  document.querySelectorAll("input[name=jeu]").forEach((r) => r.addEventListener("change", () => {
+    const solo = document.querySelector("input[name=jeu]:checked").value === "solo";
+    $("#partie-cartes").hidden = solo;
+    $("#partie-solo").hidden = !solo;
+    if (solo) arreterScan();
+  }));
   $("#rafraichir-appareils").addEventListener("click", listerAppareils);
   $("#scanner").addEventListener("click", scanner);
   $("#hasard").addEventListener("click", () => {

@@ -14,6 +14,8 @@ Projet indépendant, sans lien avec aucun jeu commercial existant.
 | `outils/cartes.py` | Génère `qr/*.svg`, `sortie/png/*.png` (300 dpi), `cartes.json` et `sortie/cartes.pdf`. |
 | `index.html`, `app.js` | Site : liste des cartes, révélation, filtres par pays, cause et langue. |
 | `jouer.html`, `jouer.js`, `config.js` | Lecture à l'aveugle (Web Playback SDK ou appareil Spotify Connect). |
+| `solo.js` | Mode solo de `jouer.html` : classer 10 chansons sur sa ligne du temps. |
+| `data/histoires.md` | Histoire de chaque chanson (pourquoi c'est une chanson de lutte), **à éditer à la main**. |
 | `vendor/jsQR.js` | Lecture des QR codes par la caméra (licence Apache 2.0, `vendor/jsQR-LICENSE.txt`). |
 
 ## Le fichier de travail `data/chansons.csv`
@@ -30,6 +32,31 @@ Colonnes :
 - `a_verifier` : remarques (dates placeholder, titres explicites, titres à discuter, Kino, Corse, Burning Spear).
 
 Ouvrir et enregistrer en UTF-8 (LibreOffice : « Unicode (UTF-8) », séparateur virgule). Excel peut abîmer les caractères non latins.
+
+## Les histoires `data/histoires.md`
+
+Une section par chanson, affichée après la révélation, dans `jouer.html` comme dans le mode solo, et sur la carte révélée de `index.html` :
+
+```
+## <id Spotify> · Titre — Interprète
+statut: brouillon
+sources: Livre X, p. 12 ; https://…
+note: remarque interne, jamais affichée
+
+Premier paragraphe.
+
+Second paragraphe.
+```
+
+- `statut: vérifié` retire la mention « Texte provisoire, en cours de vérification ».
+- 83 textes sont rédigés, **tous en brouillon** : écrits de mémoire, sans sources, à vérifier. 17 chansons sont marquées `à documenter` et n'affichent rien.
+- Après modification : `python3 outils/cartes.py`, qui met à jour `cartes.json`.
+
+## Mode solo
+
+Dans `jouer.html`, étape 3, choisir « Solo ». Une première carte est révélée et posée sur la ligne du temps. Chaque chanson suivante est jouée à l'aveugle, et le joueur la place entre deux cartes. Une carte bien placée rejoint la ligne ; une carte mal placée est défaussée et compte une erreur. Une même année accepte les deux côtés. La partie s'arrête à 10 chansons bien placées. Le record, c'est-à-dire le plus petit nombre d'erreurs, est gardé dans le navigateur.
+
+L'année utilisée est celle de la carte : l'année de composition si elle est remplie, sinon l'année de l'album, souvent trompeuse. Le mode solo ne sera juste qu'une fois la colonne `annee_composition` complétée.
 
 ## Générer les cartes
 

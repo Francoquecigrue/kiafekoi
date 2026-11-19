@@ -40,7 +40,16 @@
   </section>
 
   <section class="bloc">
-    <h2>3. Choisir une carte</h2>
+    <h2>3. Mode de jeu</h2>
+    <div class="ligne">
+      <label><input type="radio" name="jeu" value="cartes" checked> Avec les cartes imprimées</label>
+      <label><input type="radio" name="jeu" value="solo"> Solo : classer 10 chansons</label>
+    </div>
+  </section>
+
+  <div id="partie-cartes">
+  <section class="bloc">
+    <h2>4. Choisir une carte</h2>
     <div class="ligne">
       <button type="button" id="scanner">Scanner un QR code</button>
       <button type="button" id="hasard" class="secondaire">Carte au hasard</button>
@@ -54,15 +63,42 @@
   </section>
 
   <section class="bloc">
-    <h2>4. Écouter, deviner, révéler</h2>
+    <h2>5. Écouter, deviner, révéler</h2>
     <div class="disque" id="disque" aria-hidden="true"></div>
     <div class="ligne" style="justify-content:center">
       <button type="button" id="lecture" disabled>Lire</button>
       <button type="button" id="pause" class="secondaire" disabled>Pause</button>
       <button type="button" id="reveler" class="secondaire" disabled>Révéler</button>
     </div>
-    <div id="revelation" class="cache" style="text-align:center;margin-top:.8rem"></div>
+    <div id="revelation" class="cache revelation"></div>
   </section>
+  </div>
+
+  <div id="partie-solo" hidden>
+  <section class="bloc">
+    <h2>4. Solo</h2>
+    <p class="etat" id="solo-consigne">Écoutez chaque chanson et placez-la au bon endroit de votre ligne du temps. Objectif : 10 chansons bien placées, avec le moins d'erreurs possible.</p>
+    <div class="ligne">
+      <button type="button" id="solo-nouvelle">Nouvelle partie</button>
+      <span class="etat" id="solo-score"></span>
+    </div>
+  </section>
+
+  <section class="bloc" id="solo-jeu" hidden>
+    <div id="solo-mystere">
+      <div class="disque" id="solo-disque" aria-hidden="true"></div>
+      <div class="ligne" style="justify-content:center">
+        <button type="button" id="solo-lecture">Lire</button>
+        <button type="button" id="solo-pause" class="secondaire">Pause</button>
+      </div>
+      <p class="etat" id="solo-aide" style="text-align:center"></p>
+    </div>
+    <div id="solo-resultat" class="revelation" hidden></div>
+    <div class="ligne" style="justify-content:center"><button type="button" id="solo-suivante" hidden>Chanson suivante</button></div>
+    <h3 class="sous-titre">Ma ligne du temps</h3>
+    <ol id="solo-ligne" class="frise"></ol>
+  </section>
+  </div>
 
   <section class="bloc">
     <h2>Journal de test</h2>
@@ -75,5 +111,6 @@
 <script src="config.js"></script>
 <script src="vendor/jsQR.js"></script>
 <script src="jouer.js"></script>
+<script src="solo.js"></script>
 </body>
 </html>

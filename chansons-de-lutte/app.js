@@ -36,6 +36,10 @@ function carte(c) {
     el("div", { class: "titre" }, c.titre, c.explicite ? el("span", { class: "explicite", title: "Paroles explicites" }, "E") : null),
     el("div", { class: "artistes" }, c.artistes),
     c.contexte ? el("p", { class: "contexte" }, c.contexte) : null,
+    c.histoire && c.histoire.length ? el("details", { class: "histoire" },
+      el("summary", {}, "Pourquoi c'est une chanson de lutte"),
+      c.histoire.map((t) => el("p", {}, t)),
+      c.histoire_statut !== "vérifié" ? el("p", { class: "alerte-texte" }, "Texte provisoire, en cours de vérification.") : null) : null,
     el("div", { class: "causes" }, c.causes.join(" · ")));
   return el("article", { class: "carte" + (visible ? " revelee" : ""), "data-id": c.id },
     visible ? verso : recto,
