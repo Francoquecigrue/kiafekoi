@@ -17,7 +17,12 @@ Composée en juin 1973 par Sergio Ortega, avec Quilapayún, à partir d'un sloga
 Quilapayún, en tournée à l'étranger au moment du coup, reste en exil en France et chante la chanson dans le monde entier. Elle devient l'hymne de la résistance à la dictature chilienne, puis un chant de manifestation universel, repris et traduit sur tous les continents.
 
 ## 7DGPR4XzmRCUT62QQB7T21 · La retraite — Les Vulves Assassines
-statut: à documenter
+statut: brouillon
+sources: https://festival.voixdefemmes.org/en/artists/les-vulves-assassines
+
+Les Vulves Assassines, groupe de punk-rap féministe, publient « La retraite » en 2022 sur l'album « Das Kapital », consacré à la lutte des classes, au chômage et au travail.
+
+En 2023, pendant le mouvement contre la réforme des retraites, la chanson est diffusée dans toutes les manifestations syndicales en France.
 
 ## 4qrmFIRYVgp3GdW4FmkyIp · L'estaca — Lluís Llach
 statut: brouillon
@@ -35,9 +40,12 @@ Elle est chantée chaque année au mur des Fédérés, au cimetière du Père-La
 
 ## 6R8R2nEtGQiAeAOTZTRwgS · Table ronde — Grand Kallé et l'African Jazz
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/Table_Ronde ; https://pan-african-music.com/en/round-table-independence-cha-cha/
 
-La « Table ronde » est la conférence réunie à Bruxelles en janvier et février 1960 entre la Belgique et les dirigeants congolais, qui fixe l'indépendance du Congo au 30 juin 1960. Grand Kallé (Joseph Kabasele) et l'African Jazz, venus à Bruxelles avec la délégation, y enregistrent plusieurs chansons sur l'événement.
-note: à vérifier : le contenu précis des paroles et la date d'enregistrement de ce titre.
+La « Table ronde » est la conférence réunie à Bruxelles en janvier et février 1960 entre la Belgique et les dirigeants congolais, qui fixe l'indépendance du Congo au 30 juin 1960. Grand Kallé (Joseph Kabasele) et l'African Jazz, venus à Bruxelles pour l'occasion, y jouent et y enregistrent plusieurs chansons sur l'événement.
+
+Plus revendicative que « Indépendance Cha-Cha », sa jumelle festive, « Table ronde », en lingala et en français, soutient la cause de l'indépendance congolaise.
+note: auteur discuté (Kabasele selon Wikipédia, Roger Izeidi selon un document du Bozar).
 
 ## 78y0EW6Pr5xe0w1cdX7feC · Ah ! Ça ira — Jacques Gautier
 statut: brouillon
@@ -55,11 +63,12 @@ Aristide Bruant écrit la chanson en 1894. Yves Montand l'enregistre en 1955 dan
 
 ## 5XlA1ST1Uug5QDWsb9jHlK · La Makhnovtchina — Jacques Marchais, Vanessa Hachloum, Michel Devy
 statut: brouillon
+sources: https://nestormakhno.info/english/song.htm
 
 La « makhnovtchina » désigne le mouvement anarchiste paysan dirigé par Nestor Makhno en Ukraine pendant la guerre civile russe (1918-1921). Son armée combat les troupes allemandes, les armées blanches, puis l'Armée rouge, qui finit par l'écraser.
 
-La chanson française, attribuée à Étienne Roda-Gil, date de la fin des années 1960. Elle est devenue un classique des concerts et des rassemblements libertaires.
-note: à vérifier : auteur et date.
+La chanson française célèbre cette épopée libertaire ; elle est devenue un classique des concerts et des rassemblements anarchistes, reprise notamment par Bérurier Noir.
+note: auteur (Étienne Roda-Gil ?), date et air non confirmés par la recherche web.
 
 ## 72I4PYnCQqdPnx1YgpBmUS · Bella ciao — Giovanna Daffini
 statut: brouillon
@@ -94,20 +103,29 @@ Rolando Alarcón, figure de la « Nueva canción » chilienne, a enregistré dan
 note: à vérifier : auteur de cette chanson précise.
 
 ## 1g6deCPEMyapxnFkqBU6lR · La Libertat (Cançon de nèrvi) — Corala Occitania Lodova
-statut: à documenter
+statut: brouillon
+sources: https://www.ildeposito.org/canti/2803/pdf/testo
+
+Chanson occitane de protestation politique et sociale, publiée à Marseille le 6 février 1892 dans le journal provençal « La Sartan » sous le titre « Cançon de nèrvi ». Elle est attribuée à J. Clozel.
+
+Retrouvée par le journaliste Claude Barsotti, elle a été reprise par les chorales occitanes contemporaines, qui font revivre le répertoire de lutte en langue d'oc.
+note: auteur et contenu à confirmer ; ildeposito.org est bloqué par le réseau de la session de recherche.
 
 ## 2pe2ycdPpE5MWgRp6oiFAl · Arbetlozer marsh — Bente Kahan
 statut: brouillon
+sources: https://savethemusic.com/?p=19850 ; https://en.wikipedia.org/wiki/Mordechai_Gebirtig
 
-« La marche des chômeurs » est une chanson en yiddish de Mordkhe Gebirtig, charpentier et poète du quartier juif de Cracovie, écrite dans les années de crise et de chômage de masse de l'entre-deux-guerres en Pologne. Les chômeurs y comptent leurs pas, « un, deux, trois, quatre », sans travail ni pain.
+« La marche des chômeurs » est une chanson en yiddish de Mordkhe Gebirtig, charpentier et poète du quartier juif de Cracovie, écrite en 1938 dans la Pologne frappée par la crise et le chômage de masse. Les chômeurs y comptent leurs pas, « un, deux, trois, quatre », sans travail ni pain.
 
-Gebirtig a été tué dans le ghetto de Cracovie en 1942. Ses chansons, reprises par les survivants, sont devenues un patrimoine de la culture yiddish ouvrière. La chanteuse norvégienne Bente Kahan les a enregistrées dans son album « Farewell Cracow ».
+Gebirtig a été tué dans le ghetto de Cracovie en 1942. Ses chansons sont devenues un patrimoine de la culture ouvrière yiddish. La chanteuse norvégienne Bente Kahan les a enregistrées dans son album « Farewell Cracow ».
 
 ## 0OwzvKPNtHGzClvHHhWdTd · Dire-gelt — Bente Kahan
 statut: brouillon
+sources: https://yiddishsongs.org/dire-gelt/ ; https://ruthrubin.yivo.org/items/show/5406
 
-« L'argent du loyer » : une chanson en yiddish sur une famille pauvre qui ne peut plus payer son loyer et se retrouve menacée d'expulsion. Elle appartient au répertoire de la vie ouvrière juive d'Europe de l'Est de l'entre-deux-guerres.
-note: à vérifier : l'auteur (Mordkhe Gebirtig ?) et la date. Le rapport à la lutte est indirect : c'est un témoignage sur la misère plus qu'un chant de combat.
+« L'argent du loyer » : chanson populaire yiddish anonyme, publiée en 1912 par le folkloriste Y. L. Cahan. Elle raconte une famille pauvre incapable de payer son loyer et menacée d'expulsion par le propriétaire.
+
+C'est un témoignage sur la misère ouvrière juive d'Europe de l'Est plus qu'un chant de combat : sa place dans le jeu est à discuter.
 
 ## 254yDyF55hkUIkP6HZiMb9 · Prohibido olvidar — Rubén Blades
 statut: brouillon
@@ -119,13 +137,20 @@ note: à vérifier : le contexte précis de l'écriture.
 
 ## 18h1qlsxljVsQSUsuw11k1 · Leve Palestina — Kofia
 statut: brouillon
+sources: https://en.wikipedia.com/wiki/Leve_Palestina ; https://www.aljazeera.com/features/2024/8/11/leve-palestina-the-1970s-song-that-became-an-antiwar-anthem-in-sweden
 
-Écrite en suédois à la fin des années 1970 par George Totari, Palestinien installé en Suède, pour son groupe Kofia, formé pour soutenir la cause palestinienne. Le refrain « Leve Palestina » (Vive la Palestine) est suivi d'un appel à « écraser le sionisme ».
+Écrite en suédois par George Totari, musicien né à Nazareth et installé en Suède, pour son groupe Kofia, formé pour soutenir la cause palestinienne. Elle paraît en 1978 ou 1979. Le refrain « Leve Palestina » (Vive la Palestine) est suivi d'un appel à « écraser le sionisme ».
 
 Oubliée pendant des décennies, elle est redevenue virale sur les réseaux sociaux et dans les manifestations à partir de 2023, pendant la guerre à Gaza. Ses paroles font débat.
 
 ## 7mMC7vXmOB5jkZUUvRigRm · La Libertat — Le Chœur du Lamparo
-statut: à documenter
+statut: brouillon
+sources: https://www.ildeposito.org/canti/2803/pdf/testo
+
+Chanson occitane de protestation politique et sociale, publiée à Marseille le 6 février 1892 dans le journal provençal « La Sartan » sous le titre « Cançon de nèrvi ». Elle est attribuée à J. Clozel.
+
+Retrouvée par le journaliste Claude Barsotti, elle a été reprise par les chorales occitanes contemporaines, qui font revivre le répertoire de lutte en langue d'oc.
+note: auteur et contenu à confirmer ; ildeposito.org est bloqué par le réseau de la session de recherche.
 
 ## 1x8tqApPPOng2peO9ulYuT · El paso del Ebro — Rosa Zaragoza
 statut: brouillon
@@ -192,11 +217,11 @@ Langhoff, libéré puis exilé, la fait connaître ; elle est chantée par les B
 
 ## 3HjvhL3o0RQoI6oyFhda3j · Debout les femmes — 39 Femmes
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/L%27Hymne_du_MLF ; https://www.chartsinfrance.net/Brigitte/news-108668.html
 
-« L'Hymne des femmes » a été écrit collectivement en 1971 par des militantes du Mouvement de libération des femmes (MLF), sur l'air du « Chant des marais ». Il devient le chant des manifestations féministes françaises, en particulier pour le droit à l'avortement.
+En mars 1971, une douzaine de féministes réunies chez l'écrivaine Monique Wittig écrivent « L'Hymne des femmes » sur l'air du « Chant des marais », pour un rassemblement célébrant le centenaire de la Commune. Il devient le chant des manifestations du Mouvement de libération des femmes, en particulier pour le droit à l'avortement.
 
-En 2018, après le mouvement #MeToo, 39 chanteuses et actrices en enregistrent une nouvelle version.
-note: à vérifier : contexte et destination des bénéfices de cet enregistrement.
+En 2018, après le mouvement #MeToo, 39 chanteuses et actrices menées par Brigitte en enregistrent une nouvelle version, « Debout les femmes », au profit de La Maison des femmes.
 
 ## 0TZsy6XheL9cSxuX7yYqCO · Which Side Are You On? — Pete Seeger
 statut: brouillon
@@ -242,11 +267,12 @@ Les canuts « tissent le linceul du vieux monde », annonce la chanson. Elle fai
 
 ## 7hxxWP5ubdnIzsIEScPvr2 · A la huelga — Rolando Alarcón
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/Chicho_S%C3%A1nchez_Ferlosio ; https://en.wikipedia.com/wiki/Asturian_miners%27_strike_of_1962
 
-« A la huelga, compañeros » appelle à la grève générale contre la dictature franquiste. Elle est liée aux grandes grèves des mineurs des Asturies au début des années 1960, et circule parmi les chansons clandestines de la résistance antifranquiste.
+« A la huelga, compañeros » appelle à la grève générale contre la dictature franquiste. Elle naît au moment des grandes grèves des mineurs des Asturies de 1962-1963, et circule parmi les chansons clandestines de la résistance antifranquiste ; un premier enregistrement est réalisé clandestinement à Madrid en 1963.
 
 Le Chilien Rolando Alarcón l'a enregistrée dans ses albums de chants espagnols.
-note: à vérifier : auteur (Chicho Sánchez Ferlosio ?) et date.
+note: paroles attribuées selon les sources à Chicho Sánchez Ferlosio ou à Rolando Alarcón ; date 1962 ou 1963.
 
 ## 6SsKFQZmAsCVkAdfxmYR2T · El Quinto Regimiento — Pi de la Serra, Carme Canela
 statut: brouillon
@@ -286,17 +312,20 @@ Mimi Fariña le met en musique en 1974 ; Judy Collins l'enregistre en 1976. La c
 
 ## 7MK5PBuGOKdlCPVHONHtcQ · Sotiris Petroulas — Mikis Theodorakis
 statut: brouillon
+sources: https://brahms.ircam.fr/en/work/sotiris-petroulas ; https://en.wikipedia.org/wiki/Sotiris_Petroulas
 
-Sotiris Petroulas, étudiant et militant de la jeunesse de gauche, est tué en juillet 1965 à Athènes lors des manifestations contre la crise politique provoquée par le roi Constantin. Son enterrement devient une immense manifestation. Mikis Theodorakis lui consacre cette chanson.
+Sotiris Petroulas, étudiant et militant de la jeunesse de gauche, est tué le 21 juillet 1965 à Athènes lors des manifestations contre le renvoi du gouvernement par le roi Constantin. Mikis Theodorakis lui consacre aussitôt cette chanson, chantée par la foule qui accompagne son cercueil.
 
 Deux ans plus tard, la dictature des colonels (1967-1974) interdit la musique de Theodorakis, emprisonné puis exilé.
+note: parolier discuté (Theodorakis ou Iakovos Kambanellis).
 
 ## 3L1bnhUradYVpa6jSzwbOd · L'appel du Komintern — Revolutionary Protest Choir
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/Kominternlied ; https://www.marxists.org/subject/art/music/lyrics/fr/appel-komintern.htm
 
-Le « Kominternlied » est un chant allemand de la fin des années 1920, musique de Hanns Eisler, écrit pour l'Internationale communiste (Komintern, 1919-1943), qui coordonnait les partis communistes du monde entier. Il appelle les prolétaires de tous les pays à se lever.
+Le texte du « Kominternlied » est écrit en 1926 par Franz Jahnke et Maxim Vallentin ; Hanns Eisler le met en musique pour le dixième anniversaire de l'Internationale communiste (Komintern, 1919-1943), qui coordonnait les partis communistes du monde entier. Il est créé à Berlin en 1929.
 
-Sa version française, « L'appel du Komintern », a été chantée dans les milieux communistes français.
+Sa version française, « L'appel du Komintern », appelle les prolétaires de tous les pays à se lever ; elle a été chantée dans les milieux communistes français.
 
 ## 5kn0LKQhQVtyMzQN6vh6MZ · Santa Bárbara bendita — Coral San Martín de Sotrondio
 statut: brouillon
@@ -335,8 +364,9 @@ Bono la présentait sur scène comme « pas une chanson rebelle » : elle dénon
 
 ## 0dOg1ySSI7NkpAe89Zo0b9 · Born in the U.S.A. — Bruce Springsteen
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/Born_in_the_U.S.A._(song) ; https://www.rollingstone.com/music/music-features/bruce-springsteen-wrote-born-in-usa-exclusive-book-excerpt-811634
 
-Sous un refrain qui sonne comme un hymne patriotique, Bruce Springsteen raconte en 1984 l'histoire d'un ouvrier envoyé au Viêt Nam, puis abandonné à son retour : pas de travail, pas d'aide, un frère mort au combat.
+Bruce Springsteen écrit la chanson fin 1981 et l'enregistre en 1982 ; elle sort en 1984. Sous un refrain qui sonne comme un hymne patriotique, elle raconte un ouvrier envoyé au Viêt Nam, puis abandonné à son retour : pas de travail, pas d'aide, un frère mort au combat.
 
 La chanson a été souvent mal comprise, au point que le président Ronald Reagan l'a citée en campagne. C'est en réalité une chanson amère sur la classe ouvrière américaine et les vétérans.
 
@@ -370,11 +400,13 @@ Après le coup d'État de 1973, la chanson est interdite au Chili et chantée en
 
 ## 1qJ2FWK2nJMKKE0abGuo2A · Arizona (shoot) — Tmoin, Achille
 statut: à documenter
+note: Achille, jeune rappeur indépendant bruxellois, avec Tmoin (Bandcamp). Aucun lien avec une lutte trouvé.
 
 ## 2dOMGYKzJpnlFJRSa8dvwL · Grândola, Vila Morena — José Afonso
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/Gr%C3%A2ndola,_Vila_Morena ; https://www.rtp.pt/noticias/estorias/grandola-a-cancao-que-a-censura-deixou-passar_n730159
 
-José « Zeca » Afonso compose en 1971 cet hommage à la fraternité des ouvriers de la ville de Grândola, au sud du Portugal, alors sous la dictature de l'Estado Novo. « C'est le peuple qui commande », dit la chanson.
+En mai 1964, José « Zeca » Afonso chante pour la société ouvrière musicale de Grândola, au sud du Portugal, alors sous la dictature de l'Estado Novo. Il lui dédie ensuite ce poème sur la fraternité des ouvriers, « c'est le peuple qui commande », qu'il enregistre en 1971 et que la censure laisse passer.
 
 Le 25 avril 1974 à minuit vingt, sa diffusion à la radio sert de signal aux militaires qui déclenchent la révolution des Œillets et renversent la dictature. Elle a été rechantée dans les manifestations contre l'austérité en 2012-2013.
 
@@ -394,14 +426,15 @@ Les Wolfe Tones, groupe républicain irlandais, tirent leur nom de Theobald Wolf
 
 ## 2UevfJmTi7FodUAWprhuvU · Tanbou Lou — The Souljazz Orchestra
 statut: à documenter
+note: « tambour lourd » en créole ; morceau de Pierre Chrétien (Souljazz Orchestra, Canada), album Solidarity 2012. Aucun lien avec une lutte trouvé : à discuter.
 
 ## 3mH0Lmh3xjk16INiPISHq7 · A luta continua — Miriam Makeba
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/A_luta_continua ; https://pan-african-music.com/en/miriam-makeba-and-the-fight-goes-on/
 
-« A luta continua » (la lutte continue) est le slogan du FRELIMO, le mouvement de libération du Mozambique contre la colonisation portugaise, repris par son dirigeant Samora Machel. Le Mozambique devient indépendant le 25 juin 1975.
+« A luta continua » (la lutte continue) est le cri de ralliement du FRELIMO, le mouvement de libération du Mozambique contre la colonisation portugaise. Le Mozambique devient indépendant le 25 juin 1975.
 
-Miriam Makeba, chanteuse sud-africaine exilée et militante contre l'apartheid, en fait une chanson en hommage à cette indépendance.
-note: à vérifier : date et circonstances de l'enregistrement.
+Miriam Makeba, chanteuse sud-africaine exilée, assiste aux cérémonies avec la délégation guinéenne ; sa fille Bongi écrit cette chanson pour l'occasion. Makeba l'enregistre en 1989 sur l'album « Welela », alors que l'apartheid n'est pas encore tombé.
 
 ## 3RZoPvPHZsPTTc94DfWSCL · Zombie — Fela Kuti
 statut: brouillon
@@ -412,20 +445,28 @@ En représailles, en 1977, un millier de soldats attaquent la « République de 
 
 ## 7bqXRQ1XT2uAECGKcyvRza · Libérez l'Algérie — Ghiles Zikioue
 statut: à documenter
+note: ce titre de 2015 n'est PAS l'hymne du Hirak « Libérez l'Algérie » (2 mars 2019, collectif Jam, Amel Zen, Idir Benaibouche, Aboubakr Maatallah). Chercher cet hymne sur Spotify pour le remplacer.
 
 ## 0UO6j3Nyor7zuJdB3ldNxQ · A Piece of Ground — Miriam Makeba
 statut: brouillon
+sources: https://jeremytaylormusic.com/schools.html ; https://miriammakeba.co.za/releases/Tracks-Less-Travelled-1958-1998
 
-Chanson sur la dépossession des terres des Noirs d'Afrique du Sud par les colons, puis par les lois de l'apartheid qui réservent l'essentiel du territoire à la minorité blanche. Miriam Makeba, exilée à partir de 1960, l'a enregistrée dans les années 1960.
-note: à vérifier : l'auteur (Jeremy Taylor ?) et la date.
+Écrite en 1962 par le Sud-Africain Jeremy Taylor pour la revue musicale « Wait a Minim », la chanson parle de la dépossession des terres des Noirs d'Afrique du Sud par les colons, puis par les lois de l'apartheid qui réservent l'essentiel du territoire à la minorité blanche.
+
+Miriam Makeba, exilée depuis 1960, l'enregistre à partir de 1966. Elle devient un chant de ralliement des mouvements noirs de protestation des années 1970 et 1980.
 
 ## 09UDbTUZPXK8mYZZpKhFJ9 · سرود آزادی — Ethnic Musicians
-statut: à documenter
+statut: brouillon
+sources: https://cambridge.org/core/services/aop-cambridge-core/content/view/D05CDF27B4A1D85E409ADD24951C0E1B/S0021086223000154a.pdf/women-reclaiming-their-voices-for-life-and-freedom-music-and-the-2022-uprising-in-iran.pdf
+
+« L'hymne de la liberté », paru fin octobre 2022, en plein soulèvement « Femme, vie, liberté » qui suit la mort de Mahsa Jina Amini en Iran. Un « Sorud-e Āzādi » anonyme, aussi appelé « Barpākhiz » (Lève-toi), compte parmi les chants les plus repris du mouvement.
+note: vérifier que cet enregistrement (« Ethnic Musicians ») est bien le Sorud-e Āzādi / Barpākhiz du mouvement.
 
 ## 7xzMrUmlooPa1Fmp88hlYc · Sodade — Cesária Évora
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/Armando_Zeferino_Soares ; https://wikipedia.com/wiki/Sodade
 
-« Sodade », la nostalgie en créole capverdien, évoque le départ des Capverdiens envoyés travailler dans les plantations de São Tomé à l'époque coloniale portugaise, souvent dans des conditions proches du travail forcé. La chanson est attribuée à Armando Zeferino Soares.
+« Sodade », la nostalgie en créole capverdien, évoque le départ des Capverdiens partis travailler dans les plantations de São Tomé à l'époque coloniale portugaise, souvent dans des conditions proches du travail forcé. Armando Zeferino Soares dit l'avoir composée dans les années 1950 pour des amis qui s'embarquaient pour São Tomé ; un tribunal lui en a reconnu la paternité en 2006.
 
 Cesária Évora la fait connaître dans le monde entier en 1992. Le rapport à la lutte tient à la mémoire de l'exil et de l'exploitation coloniale, sans appel au combat.
 
@@ -438,6 +479,7 @@ Les bénéfices sont reversés au Mouvement de l'immigration et des banlieues (M
 
 ## 5uuvRfL6yhUu6EwAyujRGY · Nicaragüita — Motivés
 statut: brouillon
+note: année d'écriture non confirmée (années 1970 ou vers 1981).
 
 Écrite par Carlos Mejía Godoy après la victoire de la révolution sandiniste de 1979 au Nicaragua, qui renverse la dictature de la famille Somoza. Une déclaration d'amour au pays, « la plus douce des fleurs », libéré.
 
@@ -465,7 +507,13 @@ Les paroles polonaises de la « Warszawianka » sont écrites en 1879 par Wacła
 Traduit dans de nombreuses langues, il fait le tour du mouvement ouvrier ; en Espagne, son air devient celui de « A las barricadas ».
 
 ## 05VQCQ0wA5hJBlYao2FoAa · La Libertat — Lo Cor de la Plana
-statut: à documenter
+statut: brouillon
+sources: https://www.ildeposito.org/canti/2803/pdf/testo
+
+Chanson occitane de protestation politique et sociale, publiée à Marseille le 6 février 1892 dans le journal provençal « La Sartan » sous le titre « Cançon de nèrvi ». Elle est attribuée à J. Clozel.
+
+Retrouvée par le journaliste Claude Barsotti, elle a été reprise par les chorales occitanes contemporaines, qui font revivre le répertoire de lutte en langue d'oc.
+note: auteur et contenu à confirmer ; ildeposito.org est bloqué par le réseau de la session de recherche.
 
 ## 4Dgus4Z1Dtbkv3BOnuwFf5 · This Is Not a Song, It's an Outburst: Or, the Establishment Blues — Rodriguez
 statut: brouillon
@@ -493,12 +541,16 @@ Il reste aujourd'hui l'hymne le plus connu du mouvement libertaire dans le monde
 
 ## 6IJIKoKYv71iF16hUiCg8i · Cinturini — Lucilla Galeazzi
 statut: brouillon
+sources: https://www.ildeposito.org/canti/615/pdf/testo
 
-Lucilla Galeazzi, chanteuse de Terni, ville industrielle de l'Ombrie, a fait revivre les chants de travail de sa région. « Cinturini » renverrait aux ouvrières de la filature de jute Centurini de Terni.
-note: à vérifier : origine, auteur et contenu du chant. Le lien avec la lutte reste à préciser.
+Chanson en dialecte de Terni, écrite par Lucilla Galeazzi et Valentino Paparelli. Elle raconte les ouvrières de la filature de jute ouverte à Terni au début du XXe siècle par l'ingénieur Centurini, dont le nom était déformé en « Cinturini » dans le parler local.
+
+Lucilla Galeazzi, née à Terni en 1950, a consacré une grande part de son œuvre à la mémoire ouvrière de sa ville industrielle.
+note: année d'écriture inconnue.
 
 ## 5IhvrGqi5fRkBKprD3mijC · El Payandé — Lucha Reyes
 statut: à documenter
+note: composé par le Colombien Vicente Olguín (El Comercio) ; aucun lien avec une lutte trouvé : à discuter.
 
 ## 4LTNAjsm2FA8BkvmELvDvt · Kan ar Kann — Tri Yann
 statut: à documenter
@@ -511,10 +563,15 @@ Chant de travail en langue nguni, chanté par les travailleurs migrants qui part
 Chanté au bagne de Robben Island, il est devenu un symbole d'endurance face à l'apartheid, puis un hymne national officieux, notamment pendant la Coupe du monde de rugby de 1995.
 
 ## 0HhkteYzGJyCB6FZC80abL · Sin pan — Coro Popular Jabalón
-statut: à documenter
+statut: brouillon
+sources: https://www.ildeposito.org/canti/623/pdf/testo
+
+Chanson de protestation espagnole de l'entre-deux-guerres, anticléricale, sur la faim des pauvres (« sin pan », sans pain). Elle appartient au répertoire chanté pendant la guerre civile, repris par les chorales militantes après la mort de Franco.
+note: auteur et date inconnus ; contenu à vérifier.
 
 ## 4kuVdlsLbfQyfn71k9umvI · Casca l'uliva — Serena Rispoli, Debora Di Gilio
 statut: à documenter
+note: chanson populaire italienne (variante « Cade l'uliva »), album de comptines ; aucun lien avec une lutte trouvé : à discuter.
 
 ## 4dHzBEg7c46vcm5R6ZxJla · Die Gedanken sind frei — Pete Seeger
 statut: brouillon
@@ -525,9 +582,11 @@ On raconte que Sophie Scholl, du groupe de résistance de la Rose blanche, le jo
 
 ## 3PfqCDBnk0uqgMnX0FubQB · Dissan Na M'bera — Super Mama Djombo
 statut: brouillon
+sources: https://www.robertchristgau.com/get_artist.php?id=5263 ; https://www.wikipedia.com/wiki/Super_Mama_Djombo
 
-Super Mama Djombo est le groupe phare de la Guinée-Bissau des années 1970, né pendant la guerre d'indépendance menée par le PAIGC d'Amílcar Cabral contre le Portugal (indépendance en 1973-1974), et associé aux premières années du pays indépendant.
-note: à vérifier : le contenu et la date de cette chanson précise.
+Super Mama Djombo est le groupe phare de la Guinée-Bissau des années 1970 ; ses chansons anticoloniales ont accompagné le PAIGC d'Amílcar Cabral dans la lutte pour l'indépendance contre le Portugal.
+
+« Dissan Na M'bera », écrite par Adriano Atchutchi après l'indépendance, signifie à peu près « Laisse-moi marcher au bord de la route » : ne m'écrase pas avec ta voiture de fonction. Une critique de la nouvelle élite au pouvoir, et le plus grand succès du groupe.
 
 ## 5L9MdJjYonYyktDQk2Ei6b · Mona Ki Ngi Xica — Bonga
 statut: brouillon
@@ -537,7 +596,12 @@ Bonga, athlète angolais sélectionné dans l'équipe du Portugal, s'enfuit en 1
 Condamné par le régime portugais, il devient la voix de la lutte pour l'indépendance de l'Angola, obtenue en 1975.
 
 ## 4dlOK5lQLMTS66QEGZKsRc · TERITORYO — Morobeats et collectif
-statut: à documenter
+statut: brouillon
+sources: https://www.abs-cbn.com/news/nation/2025/5/30/teritoryo-namin-to-filipino-hiphop-group-morobeats-makes-waves-with-song-for-wps-0937 ; https://www.scmp.com/week-asia/lifestyle-culture/article/3322881/filipinos-rap-resistance-south-china-sea-music-challenge-rallying-cry-unity
+
+« Territoire » : le collectif de hip-hop philippin Morobeats y défend la souveraineté des Philippines sur la mer des Philippines occidentale, que revendique la Chine. Le morceau évoque l'affrontement violent de juin 2024 entre la marine philippine et les garde-côtes chinois près du récif d'Ayungin, et les pêcheurs privés de leurs zones de pêche traditionnelles.
+
+La coalition citoyenne Atin Ito l'a jouée lors de ses missions civiles en mer, et a lancé en 2025 un défi invitant chacun à rapper sur sa musique.
 
 ## 2ZA0kk67dKL8E5UjEbA2rD · Apesar de você — Chico Buarque
 statut: brouillon
@@ -549,8 +613,7 @@ Quand le régime comprend que le « toi » désigne la dictature, la chanson est
 ## 6mrwHoafWEfB7iJYnNIGMn · Электричка (Elektrichka) — Kino
 statut: brouillon
 
-Viktor Tsoï, chanteur du groupe Kino, figure du rock soviétique non officiel des années 1980. Dans « Le train de banlieue », le narrateur est emporté là où il ne veut pas aller, une métaphore de la vie sans choix en URSS.
-note: à vérifier : la chanson aurait été interdite en concert par les autorités.
+Viktor Tsoï, chanteur du groupe Kino, figure du rock soviétique non officiel des années 1980. « Le train de banlieue », enregistrée dès 1982 sur le premier album du groupe, raconte un homme emporté là où il ne veut pas aller : une métaphore de la vie sans choix en URSS.
 
 Le lien à la lutte est plus net dans « Хочу перемен » (Je veux du changement), devenu un hymne de la perestroïka puis des manifestations en Russie et en Biélorussie.
 
@@ -566,10 +629,11 @@ statut: à documenter
 
 ## 4aDCdCD9rfUoQ6FlWCF6nd · 임을 위한 행진곡 (Marche pour le bien-aimé) — 노래를 찾는 사람들
 statut: brouillon
+sources: https://mobile.newsis.com/view/NISX20200516_0001027045 ; https://www.khan.co.kr/article/201705181603001/amp
 
-Composée en 1981-1982, sur un poème de Baek Ki-wan mis en musique par Kim Jong-ryul, pour un « mariage posthume » entre Yoon Sang-won, tué lors du soulèvement de Gwangju en mai 1980 réprimé dans le sang par l'armée, et la militante ouvrière Park Gi-sun.
+En mai 1980, l'armée écrase dans le sang le soulèvement démocratique de Gwangju. En 1982, l'écrivain Hwang Sok-yong écrit les paroles à partir d'un poème composé en prison par le militant Baek Ki-wan, et l'étudiant Kim Jong-ryul compose la musique, pour un spectacle célébrant le « mariage posthume » de Yoon Sang-won, tué à Gwangju, et de la militante ouvrière Park Gi-sun.
 
-Elle devient l'hymne du mouvement démocratique sud-coréen et se chante chaque année à la commémoration de Gwangju. Elle a été reprise dans d'autres luttes en Asie, notamment à Hong Kong.
+Enregistrée officiellement en 1991 par le collectif Noraereul Chatneun Saramdeul, elle devient l'hymne du mouvement démocratique sud-coréen et se chante chaque année à la commémoration de Gwangju. Elle a été reprise dans d'autres luttes en Asie, notamment à Hong Kong.
 
 ## 2xYUmiqMOw2deOABJ1f67h · Slavery Days — Burning Spear
 statut: brouillon
@@ -580,6 +644,7 @@ L'album rend hommage à Marcus Garvey, militant jamaïcain du panafricanisme et 
 
 ## 33CTv3UT9kRPUrYBVJGCyk · Ey Reqîb — Şivan Perwer
 statut: brouillon
+sources: https://en.wikipedia.org/wiki/Ey_Req%C3%AEb ; https://en.wikipedia.org/wiki/Dildar_(poet)
 
 « Ô ennemi » : poème écrit en 1938 par Dildar, poète kurde, devenu l'hymne du mouvement national kurde. C'est l'hymne de l'éphémère république kurde de Mahabad (1946) et aujourd'hui celui de la région autonome du Kurdistan d'Irak.
 
@@ -588,8 +653,8 @@ statut: brouillon
 ## 5QOLYYcJHuMBUNHjpshCxV · Bandera — Canta U Populu Corsu
 statut: brouillon
 
-Canta U Populu Corsu, fondé en 1973, est le groupe emblématique du « riacquistu », la réappropriation de la langue et de la culture corses dans les années 1970, liée à la montée du mouvement nationaliste.
-note: à vérifier : le sujet de « Bandera », qui évoquerait le drapeau corse à tête de Maure.
+Canta U Populu Corsu, fondé au début des années 1970, est le groupe emblématique du « riacquistu », la réappropriation de la langue et de la culture corses, liée à la montée du mouvement nationaliste.
+note: sujet de « Bandera » non trouvé par la recherche web.
 
 ## 4tCmDV359N1JIJ10BP3T9d · Nkosi Sikelel' iAfrika — Dumisani Ma-Afrika!
 statut: brouillon
@@ -635,6 +700,7 @@ Vue des dizaines de millions de fois en deux jours, la chanson devient l'hymne d
 
 ## 0ApurVd4mTOSaiYksHC71q · Podustunna Poddunadugu — Jadala Ramesh
 statut: à documenter
+note: titre proche de « Podustunna Poddumeeda », chanson de Gaddar pour le mouvement pour l'État du Telangana (film Jai Bolo Telangana, 2011). Vérifier s'il s'agit de la même chanson.
 
 ## 6dN5MTGByJz4DRQ8SCiWh6 · 一无所有 (Je n'ai rien) — Cui Jian
 statut: brouillon
