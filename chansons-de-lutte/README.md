@@ -25,7 +25,7 @@ Colonnes :
 - `id`, `uri`, `isrc`, `titre_spotify`, `album`, `date_album`, `annee_album`, `explicite`, `duree_s`, `label`, `ligne_source` : issus de l'export Spotify (`ligne_source` = numéro de ligne dans le CSV 2).
 - `titre_carte` : titre imprimé (suffixes « Remastered », « Live »… retirés). Modifiable.
 - `artistes` : séparés par des virgules. À raccourcir si besoin (ex. « 11'30 contre les lois racistes »).
-- `annee_composition` : année d'**écriture** de la chanson. C'est l'année imprimée en grand et celle qu'on classe. Tant qu'elle est vide, la carte affiche l'année de l'album avec « date d'album, à vérifier », et elle est **exclue du mode solo**.
+- `annee_composition` : année d'**écriture** de la chanson. C'est l'année imprimée en grand et celle qu'on classe. Règle : l'année du **texte** le plus souvent possible (poème d'Aragon 1955 pour L'Affiche rouge, pas la musique de Ferré 1959). Tant qu'elle est vide, la carte affiche l'année de l'album avec « date d'album, à vérifier », et elle est **exclue du mode solo**.
 - `annee_enregistrement` : année d'enregistrement de *cette* version. Elle diffère souvent de `date_album`, qui peut être celle d'une compilation ou d'une réédition. Si elle diffère de l'année d'écriture, le verso indique « écrite en X · cette version : Y ».
 - `version_tardive` : `oui`, `non` ou vide. Vide, elle est calculée : `oui` si l'enregistrement est postérieur d'au moins 20 ans à l'écriture. `oui` force le sablier quand l'année d'enregistrement est inconnue mais certainement tardive (chants du XVIIIe ou du XIXe siècle). Le sablier « Version tardive » apparaît au recto des cartes et pendant l'écoute.
 - Ces trois colonnes ont été **pré-remplies de mémoire** pour 58 et 56 chansons : à vérifier (voir `a_verifier`).
