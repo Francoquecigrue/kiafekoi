@@ -1,0 +1,97 @@
+# Copie de référence de /opt/stack/docker-compose.yml (test sous Windows 11 / WSL2)
+# Sur la machine dédiée Linux : ajouter à jellyfin  devices: [/dev/dri:/dev/dri]
+x-common: &common
+  environment: &env
+    PUID: 1000
+    PGID: 1000
+    TZ: Europe/Paris
+  restart: unless-stopped
+
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    container_name: gluetun
+    cap_add: [NET_ADMIN]
+    devices: [/dev/net/tun:/dev/net/tun]
+    environment:
+      VPN_SERVICE_PROVIDER: protonvpn
+      VPN_TYPE: wireguard
+      WIREGUARD_PRIVATE_KEY: ${WIREGUARD_PRIVATE_KEY}
+      SERVER_COUNTRIES: Switzerland,Netherlands
+      PORT_FORWARD_ONLY: "on"
+      VPN_PORT_FORWARDING: "on"
+      TZ: Europe/Paris
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+
+  qbittorrent:
+    <<: *common
+    image: lscr.io/linuxserver/qbittorrent
+    container_name: qbittorrent
+    network_mode: service:gluetun
+    depends_on: [gluetun]
+    environment:
+      <<: *env
+      WEBUI_PORT: 8080
+    volumes:
+      - /opt/stack/config/qbittorrent:/config
+      - /data/torrents:/data/torrents
+
+  prowlarr:
+    <<: *common
+    image: lscr.io/linuxserver/prowlarr
+    container_name: prowlarr
+    volumes: [/opt/stack/config/prowlarr:/config]
+    ports: [9696:9696]
+
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr
+    container_name: flaresolverr
+    restart: unless-stopped
+    ports: [8191:8191]
+
+  radarr:
+    <<: *common
+    image: lscr.io/linuxserver/radarr
+    container_name: radarr
+    volumes:
+      - /opt/stack/config/radarr:/config
+      - /data:/data
+    ports: [7878:7878]
+
+  sonarr:
+    <<: *common
+    image: lscr.io/linuxserver/sonarr
+    container_name: sonarr
+    volumes:
+      - /opt/stack/config/sonarr:/config
+      - /data:/data
+    ports: [8989:8989]
+
+  bazarr:
+    <<: *common
+    image: lscr.io/linuxserver/bazarr
+    container_name: bazarr
+    volumes:
+      - /opt/stack/config/bazarr:/config
+      - /data/media:/data/media
+    ports: [6767:6767]
+
+  jellyfin:
+    <<: *common
+    image: lscr.io/linuxserver/jellyfin
+    container_name: jellyfin
+    volumes:
+      - /opt/stack/config/jellyfin:/config
+      - /data/media:/data/media
+    ports: [8096:8096]
+
+  seerr:
+    image: ghcr.io/seerr-team/seerr:latest
+    container_name: seerr
+    init: true
+    environment: { TZ: Europe/Paris }
+    volumes: [/opt/stack/config/seerr:/app/config]
+    ports: [5055:5055]
+    restart: unless-stopped
